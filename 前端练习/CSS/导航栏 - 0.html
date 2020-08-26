@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导航栏</title>
+		<style type="text/css">
+			/*
+			1.css解析是从新往下解析，样式冲突时就近原则
+			*/
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			#nav {
+				width: 960px;
+				height: 35px;
+				background-color: #E7E7E7;
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+
+			#nav ul {
+				width: 960px;
+				height: 35px;
+			}
+
+			#nav ul li {
+				float: left;
+				list-style: none;
+				background-color: #E7E7E7;
+				height: 35px;
+				text-align: center;
+				line-height: 35px;
+				
+			}
+			#nav ul li a{
+				font-size: 14px;
+				color: #8790A1;
+				text-decoration: none;
+				display: block;
+				float: left;
+				height: 35px;
+				padding: 0 10px;	
+				}
+			#nav ul li a:hover{
+				background-color: #646464;
+				color: #FFF;
+				font-size: 15px;
+			}
+				
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li><a href="#">淘宝</a></li>
+				<li><a href="#">百度</a></li>
+				<li><a href="#">腾讯</a></li>
+				<li><a href="#">今日头条</a></li>
+				<li><a href="#">微软</a></li>
+				<li><a href="#">京东</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

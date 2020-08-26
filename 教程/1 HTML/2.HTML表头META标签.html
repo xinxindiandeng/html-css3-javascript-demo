@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 网页字符集 -->
+    <meta charset="UTF-8">
+    <title>HTML　META标签</title>
+
+    <!-- META用法注释注释 -->
+    <!-- META（meta-information） ：描述页面信息；用于搜索引擎和更新频度描述和关键词；以key和value的形式表现-->
+    
+    <!-- ******************************************************************************* -->
+    <!-- meta 属性： http-equiv:给浏览器传递信息，协助浏览器正确处理网页-->
+    <!-- http-equiv值 -->
+
+    <!-- 1.网页过期 expires指定网页过期时间。一旦网页过期，必须从服务器上下载 -->
+    <!-- <meta http-equiv="expires" content="Fri, 12 Jan 2020 18:18:18 GMT"> -->
+
+    <!-- 2.刷新或者跳转到其他url,content 第一参数为时间（指定执行时间，第二参数为空时为刷新操作），第二参数为url（url不为空时，指定跳转时间） -->
+    <!-- 2.1 刷新操作 -->
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <!-- 2.2 跳转操作  新浏览器失效了-->
+    <!-- <meta http-equiv="refresh" content="2;url=https://blog.csdn.net"> -->
+
+    <!-- 3.禁止从本地缓存中访问网页 -->
+    <!-- <meta http-equiv="pragma" content="no-cache"> -->
+
+    <!-- 4.设置cookie：设置cookie并同时指定cookie过期时间 -->
+    <!-- <meta http-equiv="set-cookie" content="name=value expires=Fri, 12 Jan 2020 18:18:18 GMT,path=/"> -->
+
+    <!-- 5.优化移动设备显示 -->
+    <!-- <meta http-equiv="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
+
+    <!-- 6.使用浏览器版本 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <!-- 关于X-UA-Compatible -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=6"> -->
+    <!--使用ie6 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7"> -->
+    <!--使用ie7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=8"> -->
+    <!--使用ie8 -->
+
+<!-- *********************************************************************************************** -->
+<!-- name属性：指定元信息的名称，该名称值可以随意指定 -->
+
+<!-- 1.网页作者 -->
+<meta name="autor" content="xinxindiandeng">
+
+<!-- 2.网页地址 -->
+<meta name="website" content="www.demo.com">
+
+<!-- 3.网页版本号 -->
+<meta name="copyright" content="2020-2021 demo.com">
+
+<!-- 4.网页关键字用于seo -->
+<meta name="keywords" content="meta,html">
+
+<!-- 5.网页描述 -->
+<meta name="description" content="网页描述">
+
+<!-- 6.搜索引擎方式 -->
+
+<meta name="robots" content="index,follow">
+
+<!--
+    all：文件将被检索，且页面上的链接可以被查询；
+    none：文件将不被检索，且页面上的链接不可以被查询；
+    index：文件将被检索；
+    follow：页面上的链接可以被查询；
+    noindex：文件将不被检索；
+    nofollow：页面上的链接不可以被查询。
+-->
+
+<!-- 浏览器内核设置:主要针对360，搜狗，QQ等双内核浏览器。 -->
+<meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+</head>
+
+<body>
+    <h1 align="center">注册信息</h1>
+    <hr color="#336699" />
+    <form action="表格.html" method="GET">
+        <table width="600px" bgcolor="#f2f2f2" align="center">
+            <tr>
+                <td align="right">姓名：</td>
+                <td align="left"><input type="text" size="25" maxlength="6" name="username" placeholder="请输入姓名" /></td>
+            </tr> 
+            <tr>
+                <td align="right">邮箱：</td>
+                <td align="left"><input type=" text " name="email " placeholder="*.@163.com " size="25 " /></td>
+            </tr>
+            <tr>
+                <td align="right ">密码：</td>
+                <td align="left"><input type="password" name="password" size="25" maxlength="25" placeholder="请输入密码" /></td>
+            </tr>
+            <tr>
+                <td align="right">确认密码：</td>
+                <td align="left"><input type="password" name="Q_password " size="25 " maxlength="25 " placeholder="请输入确认密码 " /></td>
+            </tr>
+            <tr>
+                <td align="right ">上传照片：</td>
+                <td align="left"><input type="file" name="file" /></td>
+            </tr>
+            <tr>
+                <td align="right">性别：</td>
+                <td align="left">
+					<label for="radio_man">  男<input type="radio" name="sex" id="radio_man" value="man " /></label>
+					<label for="radio_woman"> 女<input type="radio" name="sex" id="radio_woman" value="woman " /></label>
+                    l<label for="radio_bm">保密 <input type="radio" name="sex" id="radio_bm" value="bm " checked/></label>
+					
+                </td>
+            </tr>
+            <tr>
+                <td align="right ">爱好：</td>
+                <td align="left">
+                    唱歌<input type="checkbox" name="ah1" value="1"> 跳舞
+                    <input type="checkbox" name="ah1" value="2"> 下象棋
+                    <input type="checkbox" name="ah1" value="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    城市：
+                </td>
+                <td align="left">
+                    <select name=" select "> 
+                            <option name="bj ">北京</option>
+                            <option name="sh ">上海</option>
+                            <option name="sz " selected>苏州</option>
+                        </select>
+
+                    <select name="select1 " size="3 " multiple> 
+                                <option name="bj ">北京</option>
+                                <option name="sh ">上海</option>
+                                <option name="sz ">苏州</option>
+                            </select>
+
+                    <select name="select2 "> 
+                                <optgroup label="华北 ">
+                                    <option name="bj ">北京</option>
+                                </optgroup>
+                                <optgroup label="华东 ">
+                                    <option name="sh ">上海</option>
+                                </optgroup >
+                                <optgroup label="华中 ">
+                                    <option name="sz " selected>苏州</option>
+                                </optgroup>
+                                </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right ">简介:</td>
+                <td align="left">
+                    <textarea name="textarea" rows="6" cols="65" placeholder="请输入您的简介"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="hidden" name="隐藏域" /></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="button" name="button" value="确定 " />
+                    <input type="submit" name="submit" />
+                    <input type="reset" name="reset" />
+                    <input type="image" name="image_button" src="image/image-button.png " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

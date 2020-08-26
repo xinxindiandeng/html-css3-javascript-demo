@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位相对于祖先元素定位案例</title>
+    <style>
+        .yeye {
+            width: 600px;
+            height: 600px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+        
+        .baba {
+            width: 300px;
+            height: 300px;
+            border: 3px solid red;
+            position: fixed;
+        }
+        
+        .self {
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="baba">
+            <div class="self">
+
+            </div>
+        </div>
+    </div>
+    <img src="imgs/bg.jpg" alt="bg">
+</body>
+
+</html>

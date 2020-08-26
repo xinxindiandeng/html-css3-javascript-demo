@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性简写</title>
+
+		<style type="text/css">
+			/* 
+			复合的写法，是通过空格的方式实现。复合写法有的是不需要关心顺序的，例如background，border ；有的是需要管线顺序的，例如 font 
+			注：尽量不要混写，如果非要混写，那么一定要先写复合样式再写单一样式
+			 */
+			
+			
+			/*
+						颜色的几种写法
+							#RGB 0~F #F00红色
+							#RRGGBB 00~FF #FF0000红色
+							RGB(xx,xx,xx) RGB(255,0,0) 红色
+							RGB（x%,x%,x%）RGB(100%,0%,0%) 红色
+							RGBA(255,0,0,0.5) 50%透明红色（最后一位为颜色透明度）
+						*/
+
+			/*
+			 *单位省略
+						  width:10px; 如果是0,则可以去掉单位（width:0） 
+			 */
+
+			/*
+			 margin,padding 边距：
+						  margin p1:上右下左 都是p1;
+						  margin p1 p2:上下 p1;左右 p2
+						  margin p1 p2 p3:上是p1;左右是p2;下是 p3
+						  margin p1 p2 p3 p4:上右下左
+			*/
+
+			/*背景简写*/
+
+			/* div {
+				background-color: #FFF;
+				background-image: url(xxx.gif);
+				background-repeat: no-repeat;只有垂直方向重复background-image
+				background-attachment: fixed; 设置背景图像是否固定或者随着页面的其余部分滚动。
+				background-position: 0 0;设置背景图像的起始位置
+			}
+
+			div {
+				background: #FFF url(xxx.gif) no-repeat fixed 0 0;
+			}
+
+ */
+			/* 边框简写 
+			 
+			 
+			 div{
+			 	 border-width:1px;
+			 	 border-style:solid;
+			 	 border-color: #FF0000;
+			  }
+			 div{
+			 	border:1px solid #FF0000;
+			 }
+			 */
+			
+			/* 字体简写
+			 body{
+			 	font-style: italic;指定文本的字体样式   粗体 斜体
+			 	font-variant: small-caps; 主要用于定义小型大写字母文本
+			 	font-weight: bold; 设置文本的粗细
+			 	font-size: 12px;
+			 	line-height: 140%; 设置以百分比计的行高：.
+			 	font-family: sans-serif;
+			 }
+			 body{
+			 	font:italic small-caps bold 12px/140% sans-serif;
+			 }
+			 font：
+			 注：最少要有两个值 size，family 
+				weight style size family ✔
+				style weight size family ✔
+				style weight size/line-height family
+			 */
+			/* 列表简写
+			 li{
+			 	list-style-type:square ;设置列表项标记的类型
+			 	list-style-position: inside; 指示如何相对于对象的内容绘制列表项标记
+			 	list-style-image: url(xxx.gif);
+			 }
+			 
+			 li{
+			 	list-style: square inside url(xxx.gif);
+			 }
+			 
+			 */
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="divid">
+			<p id="pid">11111</p>
+		</div>
+
+	</body>
+</html>

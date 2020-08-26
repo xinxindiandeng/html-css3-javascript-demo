@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>网页布局</title>
+		<style type="text/css">
+			body,
+			div,
+			img,
+			ul,
+			li,
+			a {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				padding-top: 15px;
+				background: white;
+				font-family: 微软雅黑, verdana, geneva, sans-serif;
+			}
+
+			#header,
+			#article,
+			#footer {
+				background: white;
+				width: 960px;
+				margin: 0 auto;
+
+			}
+
+			#header {
+				overflow: hidden;
+			}
+
+			#logo {
+				width: 100px;
+				height: 80px;
+				float: left;
+				margin-left: 10px;
+			}
+
+			#nav,
+			ol {
+				width: 850px;
+				height: 80px;
+				float: left;
+			}
+
+			#nav li {
+				float: left;
+				list-style: none;
+				margin: 0 auto;
+			}
+
+			#nav li a {
+				display: block;
+				padding: 0 20px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				float: left;
+				text-decoration: none;
+				font-size: 21px;
+			}
+
+			#nav li a:hover {
+				color: white;
+				font-size: 22px;
+				background-color: #8790A1;
+			}
+
+
+			#footer {
+				margin-top: 10px;
+				padding-top: 18px;
+				height: 52px;
+				line-height: 18px;
+				text-align: center;
+				font-size: 12px;
+				margin-bottom: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部内容-->
+		<div id="header">
+			<!--logo-->
+			<div id='logo'><img src="img/logo.jpg" title="这是logo" alt="log"></div>
+			<!--导航-->
+			<div id="nav">
+				<ul>
+					<li><a href="#">HTML5</a></li>
+					<li><a href="#">JAVASCRAPT</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">PHP</a></li>
+					<li><a href="#">IOS</a></li>
+					<li><a href="#">Android</a></li>
+					<li><a href="#">Photoshop</a></li>
+				</ul>
+			</div>
+			<!--banner-->
+			<div id="banner"><img src="img/banner.jpg" alt="广告位"> </div>
+
+		</div>
+		<!--主体内容-->
+		<div id="article">
+			<!--文章内容-->
+			<div id="section">
+
+			</div>
+			<!--链接内容-->
+			<div></div>
+		</div>
+		<!--页脚内容-->
+		<div id="footer">
+			<p>星星点灯制作</p>
+		</div>
+	</body>
+
+</html>

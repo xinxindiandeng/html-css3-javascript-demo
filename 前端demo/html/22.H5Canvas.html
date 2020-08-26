@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 Canvas</title>
+		<script type="text/javascript">
+			function load(){
+				let c=document.getElementById("myC");
+				let context=c.getContext('2d');
+				context.fillStyle='#FF00FF';
+				context.fillRect(50,25,300,300);
+			}
+			
+			
+			window.onload=function(){
+				if(checkSupport()){
+				load();	
+				}
+				
+				
+			}
+			
+			function checkSupport(){
+				let c=document.getElementById('myC');
+				if(c.getContext){
+					console.log("支持canvas");
+					return true;
+				}else{
+					console.log('不支持canvas');
+					return false;
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+		<canvas id="myC" width="800" height="450" style="border:1px #000 solid">
+			你的浏览器不支持canvas;			
+		</canvas>
+	</body>
+</html>

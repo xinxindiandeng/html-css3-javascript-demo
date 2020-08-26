@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浏览器前缀</title>
+		<style type="text/css">
+			table{
+				width: 420px;
+				height: 150px;
+				border: 2px white solid;
+				margin: 0 auto;
+				text-align: center;
+				/* 隐藏空白 */
+				/* empty-cells: hide; */
+				/* 添加单线 */
+				/* border-collapse: collapse; */
+			}
+			table tr th{
+				width: 33%;
+				background-color: #0088CC;
+			} 
+			table tr td:nth-of-type(1){
+				background-color: #0088CC;
+			}
+			table tr:nth-child(2n) td:not(:first-child){
+				background-color: #ACACAC;
+			}
+			table tr:nth-child(2n+1) td:not(:first-child){
+				background-color: #C7BFD3;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<table>
+			<!-- <colgroup>
+				<col span="1" style="background-color: #0088CC;">	
+			</colgroup> -->
+			<tr>
+				<th>浏览器</th>
+				<th>内核</th>
+				<th>前缀</th>
+			</tr>
+			<tr>
+				<td>IE</td>
+				<td>Trident</td>
+				<td>-ms-</td>
+			</tr>
+			<tr>
+				<td>Firefox</td>
+				<td>Gecko</td>
+				<td>-moz-</td>
+			</tr>
+			<tr>
+				<td>Opera</td>
+				<td>Presto</td>
+				<td>-o-</td>
+			</tr>
+			<tr>
+				<td>Chrome</td>
+				<td>Webkit</td>
+				<td>-webkit-</td>
+			</tr>
+			<tr>
+				<td>Safari</td>
+				<td>Webkit</td>
+				<td>-webkit-</td>
+			</tr>
+			<tr>
+				<td>Opera,Chrome</td>
+				<td>Blink</td>
+				<td></td>
+			</tr>
+
+		</table>
+	</body>
+</html>

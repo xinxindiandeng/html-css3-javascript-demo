@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>transform变形注意点</title>
+		<style type="text/css">
+			/* 	注意事项：
+				1.变形操作不会影响到奇谈元素
+				2.变形操作只能添加给块元素，但是不能添加给内联元素
+				3.复合写法，可以同时添加多个变形操作
+					执行时有顺序的，限制性后面操作，再执行前面操作
+					translate会受到scale,ritate,skew 影响
+				4.transform-origin:基点位置
+					 x,y,z(3D)
+					 
+					 
+		*/
+			div {
+				width: 100px;
+				height: 100px;
+			}
+
+			.box1 {
+				background-color: red;
+			}
+
+			/* .box2{background-color: red;transform: scale(.5) translate(100px,0px);}
+	   .box3{background-color: red;transform:translate(100px,0px) scale(.5) ;} */
+			/*  .box2{background-color: red;transform: rotate(45deg) translate(100px,0px);}
+	   .box3{background-color: red;transform:translate(100px,0px)  rotate(45deg) ;} */
+			.box2 {
+				background-color: red;
+				transition: 2s;
+				transform-origin: 100px 0;
+			}
+
+			.box3 {
+				background-color: red;
+				transition: 2s;
+				transform-origin: 300px 0;
+			}
+
+			.box2:hover {
+				transform: skew(45deg) translate(100px, 0px);
+			}
+
+			.box3:hover {
+				transform: translate(100px, 0px) skew(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</body>
+</html>

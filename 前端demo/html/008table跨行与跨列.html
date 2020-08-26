@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>table的跨行与跨列</title>
+	</head>
+
+	<body>
+		<!-- 
+	 表格属性
+	  border:表格边框
+	  cellpadding:单元格内的空间
+	  cellspacing：单元格之间的空间
+	  rowspan：合并行
+	  closspan:合并列
+	  align:左右对齐方式
+	  valian:上下对齐方式
+	 -->
+		<table cellspacing="0" border="1" width="600px" align="center">
+			<caption>IT城市薪资表</caption>
+			<thead bgcolor="#00FFFF">
+				<tr align="center">
+					<!--跨行-->
+					<th rowspan="2">城市</th>
+					<!--跨列-->
+					<th colspan="2">2016</th>
+
+					<th rowspan="2">2017</th>
+					<th rowspan="2">2018</th>
+				</tr>
+				<tr>
+					<th>上半年</th>
+					<th>下半年</th>
+				</tr>
+			</thead>
+			<tbody align="center">
+				<tr>
+					<td bgcolor="#FFFFF0">上海</td>
+					<td>10000</td>
+					<td>20000</td>
+					<td>30000</td>
+					<td>40000</td>
+				</tr>
+				<tr>
+					<td bgcolor="#FFFFF0">苏州</td>
+					<td>9000</td>
+					<td>15000</td>
+					<td>25000</td>
+					<td>35000</td>
+				</tr>
+				<tr>
+					<td bgcolor="#FFFFF0">南京</td>
+					<td>8000</td>
+					<td>10000</td>
+					<td>20000</td>
+					<td>30000</td>
+				</tr>
+			</tbody>
+			<tfoot align="center">
+				<tr height="50px">
+					<td bgcolor="#FFFFF0">合计</td>
+					<td>9000</td>
+					<td>15000</td>
+					<td>25000</td>
+					<td>35000</td>
+				</tr>
+			</tfoot>
+
+		</table>
+	</body>
+
+</html>

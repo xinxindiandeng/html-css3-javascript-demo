@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS样式选择器</title>
+    <style type="text/css">
+        /* 标签选择器 */
+        
+        h1,
+        h2 {
+            color: red;
+        }
+        /* 类选择器 */
+        
+        .c1 {
+            font-size: 15px;
+        }
+        /* 后代选择器 */
+        
+        p.c1 {
+            font-size: 10px;
+        }
+        /* 类选择器 */
+        
+        .c2 {
+            color: blue;
+        }
+        /* ID 选择器 */
+        
+        #id1 {
+            color: green;
+            font-size: 12px;
+        }
+        /* 后代选择器 */
+        
+        p em {
+            color: blue;
+        }
+        /* 标签类后代选择器 */
+        
+        p.c1 em {
+            color: red;
+        }
+        /* ID后代选择器 */
+        
+        #id2 em {
+            color: salmon;
+        }
+        /* ul {
+            font-family: '黑体';
+            font-weight: bold;
+        } */
+        /* 子类选择器 */
+        
+        ul>li {
+            font-size: 30px;
+            font-family: "宋体";
+            font-weight: bold;
+            font-style: italic;
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>这是使用了标签选择器</h1>
+    <h2>这也是使用了标签选择器</h2>
+    <h2 class="c1">这是使用来了类选择器</h2>
+    <h3 class="c1 c2">同时引用两个类选择器的展示</h3>
+    <p class="c1">这是对类名一样标签不同的展示</p>
+    <pre id="id1">这是ID选择器</pre>
+    <p><em>这是后代元素展示</em></p>
+    <p class="c1"><em>这是通过类后代元素展示</em></p>
+    <p id="id2"><em>这是通过id后代元素展示</em></p>
+    <ul class="c3" id="id3">
+        <li>
+            列表1
+        </li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+
+</body>
+
+</html>

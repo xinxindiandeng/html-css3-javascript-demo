@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3属性选择器</title>
+    <style type="text/css">
+        .box li[id] {
+            color: red;
+        }
+        
+        .box li[class] {
+            color: blue;
+        }
+        
+        .box li[class="one"] {
+            color: blueviolet;
+        }
+        
+        .box li[class^="c"] {
+            /*以c开头*/
+            color: cyan;
+            font-size: 20px;
+        }
+        
+        .box li[class$="o"]
+        /*以o结尾*/
+        
+        {
+            color: darkorange;
+        }
+        
+        .box li[class*="r"] {
+            color: darkgrey;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="one">html1</li>
+            <li class="two">css1</li>
+            <li class="three">css3</li>
+            <li class="four">html5</li>
+            <li class="col-one">javascript</li>
+            <li id="xol-md">jquery</li>
+            <li>Csharp</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定定位</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        
+        .two {
+            width: 110px;
+            height: 110px;
+            background: green;
+            position: fixed;
+            /*设置坐标*/
+            right: 10px;
+            bottom: 5px;
+            /*
+
+
+            1.相对于浏览器来定位
+            2.如果不设置定位坐标  就在原来的位置
+            3.层级要比普通标签高
+            4.如果结合定位坐标，就是相对于目标位置的距离
+            5.设置固定定位后，一定是块状元素
+
+            备注：
+                坐标：偏离目标的距离
+                坐标属性
+                    left:数值
+                    right:数值               
+                    bottom:数值
+                    top:数值
+                    坐标的数值与正负没有关系
+            */
+        }
+        
+        .three {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <img src="imgs/bg.jpg" alt="图片">
+</body>
+
+</html>

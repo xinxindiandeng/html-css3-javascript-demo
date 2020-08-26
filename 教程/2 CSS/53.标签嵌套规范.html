@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>标签嵌套规范</title>
+	</head>
+	<body>
+		块标签可以嵌套内联标签
+		块嵌套块
+		正确：
+		<div id="">
+			<div id="">
+				
+			</div>
+		</div>
+		错误写法：
+		<p>
+			<div id="">
+				
+			</div>
+		</p>
+		内联不能嵌套块
+		正确写法：<a href="#"><div id="">
+			
+		</div></a>
+		错误写法：
+		<span id="">
+			<div id="">
+				
+			</div>
+		</span>
+	</body>
+</html>

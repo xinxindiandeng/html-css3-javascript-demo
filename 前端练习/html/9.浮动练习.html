@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动练习</title>
+		<style type="text/css">
+			/* 初始化样式 */
+			body,
+			div,
+			h2,
+			ul,
+			li,
+			a,
+			img,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			img {
+				display: block;
+			}
+
+			a {
+				text-decoration: none;
+				color: #666;
+				font-size: 12px;
+			}
+
+			h2 {
+				font-size: 16px;
+			}
+
+
+
+			/* 设置样式 */
+			#main {
+				margin: 20px auto;
+				width: 366px;
+			}
+
+			#main .title {
+				height: 23px;
+				line-height: 23px;
+				font-size: 12px;
+				font-weight: bold;
+				padding-left: 30px;
+				background: url(img/bg-title.jpg) no-repeat 6px 4px, url(img/bg.jpg) repeat-x;
+				/* background背景托盘可以设置为多图片,层级按照从左往右 */
+			}
+
+			.l {
+				float: left;
+			}
+
+			.r {
+				float: right;
+			}
+
+			.clear:after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+
+			#main ul {
+				overflow: hidden;
+				margin-top: 14px;
+			}
+
+			#main li {
+				margin-bottom: 22px;
+			}
+
+			#main ul li div.pic {
+				width: 99px;
+				border: 1px solid #c8c4d3;
+				margin-left: 5px;
+			}
+
+			#main ul li .pic img {
+				margin: 2px;
+			}
+
+			#main .content {
+				width: 240px;
+				margin-left: 13px;
+			}
+
+			#main .content h2 {
+				font-size: 12px;
+				line-height: 24px;
+			}
+
+			#main .content p {
+				font-size: 12px;
+				line-height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h2 class="title">外媒评论精选</h2>
+			<ul>
+				<li class="clear">
+					<div class="pic l">
+						<a href="#"><img src="img/img.jpg"></a>
+					</div>
+					<div class="content r">
+						<h2>《加勒比海盗4》--商业味浓郁</h2>
+						<p>这是测试文本这是测试文本这是测试文本这是测试文本...<a href="#">[详细]</a></p>			
+					</div>
+				</li>
+				<li class="clear">
+					<div class="pic l">
+						<a href="#"><img src="img/img.jpg"></a>
+					</div>
+					<div class="content r">
+						<h2>《加勒比海盗4》--商业味浓郁</h2>
+						<p>这是测试文本这是测试文本这是测试文本这是测试文本...<a href="#">[详细]</a></p>
+					</div>
+				</li>
+				<li class="clear">
+					<div class="pic l">
+						<a href="#"><img src="img/img.jpg"></a>
+					</div>
+					<div class="content r">
+						<h2>《加勒比海盗4》--商业味浓郁</h2>
+						<p>这是测试文本这是测试文本这是测试文本这是测试文本...<a href="#">[详细]</a></p>	
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

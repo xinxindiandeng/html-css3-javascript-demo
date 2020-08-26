@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+<body>
+    <!-- 旧版本表单元素 -->
+    <form action="1.html" method="GET">
+        <table align="center" style="width:60%;text-align: center ; background-color:#f2f2f2" border="1px"
+            rellspacing="2" rellpading="3">
+            <thead>
+                <caption>用户注册</caption>
+                <tr>
+                    <td colspan="2">用户信息</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="25%">姓名:</td>
+                    <td align="left">
+                        <input type="text" name="name" size="25" maxlength="6" placeholder="姓名" autofocus="autofocus"
+                            required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">密码:</td>
+                    <td align="left">
+                        <input type="password" name="passwd" maxlength="30" palceholder="新密码" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">确定密码:</td>
+                    <td align="left">
+                        <input type="password" name="q_passwd" maxlength="30" palceholder="请确认密码" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">性别:</td>
+                    <td align="left">
+                        男: <input type="radio" name="sex" value="man">
+                        女: <input type="radio" name="sex" value="woman" cheaked>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">生日:</td>
+                    <td align="left">
+                        <input type="text" name="birthday" maxlength="8" palceholder="生日">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">电话:</td>
+                    <td align="left">
+                        <input type="text" name="phone" maxlength="12" palceholder="联系电话">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">邮箱:</td>
+                    <td align="left">
+                        <input type="text" name="email" placeholder="邮箱地址">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">爱好:</td>
+                    <td align="left">
+                        唱歌: <input type="checkbox" name="ah" value="1">
+                        跳舞: <input type="checkbox" name="ah" value="2">
+                        下棋: <input type="checkbox" name="ah" value="3">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">城市:</td>
+                    <td align="left">
+                        <select name="sf" id="">
+                            <option value="北京">北京</option>
+                            <option value="上海">上海</option>
+                            <option value="江苏" selected>江苏</option>
+                            <option value="其他">其他</option>
+                        </select>
+                        <select name="cs" id="cs">
+                            <optgroup label="北京">
+                                <option value="北京南">北京南</option>
+                                <option value="北京东">北京东</option>
+                                <option value="北京西">北京西</option>
+                                <option value="北京北">北京北</option>
+                                <option value="北京中">北京中</option>
+                            </optgroup>
+                            <optgroup label="上海">
+                                <option value="浦东">浦东</option>
+                                <option value="浦西">浦西</option>
+                                <option value="外滩">外滩</option>
+                                <option value="徐汇">徐汇</option>
+
+                            </optgroup>
+                            <optgroup label="江苏">
+                                <option value="南京">南京</option>
+                                <option value="苏州" selected>苏州</option>
+                                <option value="无锡">无锡</option>
+                                <option value="常州">常州</option>
+                                <option value="镇江">镇江</option>
+                                <option value="南通">南通</option>
+                                <option value="扬州">扬州</option>
+                                <option value="泰州">泰州</option>
+                                <option value="盐城">盐城</option>
+                                <option value="徐州">徐州</option>
+                                <option value="淮安">淮安</option>
+                            </optgroup>
+                            <optgroup label="其他">
+                                <option value="其他"></option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">上传照片:</td>
+                    <td align="left">
+                        <input type="file" name="photo">
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">简介:</td>
+                    <td align="left">
+                        <textarea name="jianjie" id="" cols="45" rows="10" placeholder="请输入简介"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%">隐藏域</td>
+                    <td align="left">
+                        <input type="hidden" name="隐藏域">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" name="button" value="按钮">&nbsp;&nbsp;&nbsp;
+                        <input type="submit" name="submit" value="提交">&nbsp;&nbsp;&nbsp;
+                        <input type="reset" name="reset" value="重置">&nbsp;&nbsp;&nbsp;
+                        <input type="image" src="img/image-button.png">
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </form>
+</body>
+
+</html>

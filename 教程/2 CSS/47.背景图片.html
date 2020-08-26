@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>背景样式</title>
+		<style type="text/css">
+			/* 
+			background-color 背景颜色
+			background-image 背景图
+				url(背景地址) 默认：会水平垂直都铺满背景图
+			background-repeat 平铺方式
+				repeat-x x轴（水平）平铺
+				repeat-y y轴（垂直）平铺
+				repeat(x,y) 都进行平铺 ,默认值
+				no-repeat 都不平铺
+			backgournd-position 背景位置
+				x y : number(px;%) | 单词
+					x ： left center right
+					y:	top  cneter  bottom
+			background-attachment 背景图随滚动条移动的方式
+					scroll：默认值 （背景位置时按照当前元素进行偏移的）
+					fixed ：背景位置是按照浏览器位置进行偏移的
+				
+					 
+			 */
+		div{
+			width: 300px;
+			height: 300px;
+			background-color: #FF0000;
+			background-image: url(img/dog.jpg);
+			background-repeat:no-repeat;
+			background-position: 50% 50%;
+			/* background-position: 100px 50px; */
+			/* background-position: center center; */
+			background-attachment: fixed;
+			
+		}	
+		</style>
+	</head>
+	<body>
+		<div>
+
+		</div>
+	</body>
+
+</html>

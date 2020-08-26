@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 Canvas 图形变换--保存与恢复</title>
+		<script type="text/javascript">
+			//保存与恢复
+			function load() {
+				let c = document.getElementById("myC");
+				let context = c.getContext('2d');
+				context.fillStyle = "#FF00FF";
+				context.strokeStyle = "#0000FF";
+				context.fillRect(20, 20, 100, 100);
+				context.strokeRect(20, 20, 100, 100);
+				context.fill();
+				context.stroke();
+				context.save();//全局设定保存
+
+				context.fillStyle = "#FF0000";
+				context.strokeStyle = "#00FF00";
+				context.fillRect(140, 20, 100, 100);
+				context.strokeRect(140, 20, 100, 100);
+				context.fill();
+				context.stroke();
+
+				context.restore();//取save方法保存设定
+				context.fillRect(20, 140, 50, 50);
+				context.strokeRect(80, 140, 50, 50);
+				context.fill();
+				context.stroke();
+
+			}
+
+			//清理画布
+			function ClearCanvas() {
+				let c = document.getElementById("myC");
+				let context = c.getContext('2d');
+				context.clearRect(0, 0, 800, 450);
+			}
+			window.onload = function() {
+				load();
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<canvas id="myC" width="800" height="450" style="border:1px #000 solid">
+			你的浏览器不支持canvas;
+		</canvas>
+		<input type="button" id="butID" value="清除" onclick="ClearCanvas()" />
+	</body>
+</html>

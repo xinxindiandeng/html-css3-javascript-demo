@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=" UTF-8 ">
+   
+    <title>表格</title>
+</head>
+<body>
+<!-- 
+ table caption th tr td 等
+ 注：之前是有嵌套关系的，要符合嵌套规范
+ 语义化标签： thead tbody tfood
+ 注：在一个table中，tbody是可以多次出现的，但是thead，tfood只能出现一次
+ 
+ -->
+    <table border="1 "  width="500px " bgcolor="#f2f2f2 "><!--表格开始--> 
+        <thead> 
+        <caption>标题</caption> 
+        <tr><!--行-->
+            <th>表头1</th> 
+            <th>表头2</th>
+            <th>表头3</th>          
+        </tr>
+    </thead>  
+    <tbody>
+<tr>
+    <td><!--单元格-->  10000 </td>
+    <td>20000</td>
+    <td>30000</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+    <td><!--单元格--> 40000  </td>
+    <td>50000</td>
+    <td>6000</td>
+</tr>
+</tfoot>
+</table>
+
+</body>
+</html>

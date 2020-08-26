@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绝对定位</title>
+		<style type="text/css">
+			/* 
+			absolute
+			使元素完全脱离文档流
+			使内联元素支持宽高（让内联具备块特性）
+			使块元素默认宽根据内容决定（让块具备内联的特性）
+			 如果有定位元素相对于定位元素祖先元素翻身偏移，没有定位祖先元素相对于整个文档发生偏移（绝对，相对，固定）
+			 */
+
+			body,
+			div,
+			h1,
+			h2 {
+				margin: 0;
+				padding: 0;
+			}
+
+			#container {
+				border: solid 1px #F00;
+			}
+
+			#container h2 {
+				position: absolute;
+				/*参考定位 包含块（上级元素包含position） 左上角为原点定位*/
+				left: 0;
+				top: 0;
+				border: solid 1px #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>ABCD</h1>
+			<h2>1234</h2>
+		</div>
+	</body>
+</html>

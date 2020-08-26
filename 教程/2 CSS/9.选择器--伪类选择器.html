@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>伪类选择器</title>
+		<style type="text/css">
+			/* 
+			伪类选择器 ：减少类选择器的使用
+				:first-child  选择器匹配其父元素中的第一个子元素
+				:last-child   选择器匹配其父元素中的最后一个子元素
+				:nth-child(n): 选择器匹配其父元素中的第N个元素 odd:基数  even:偶数
+				:only-child:仅有的一个
+				:first-of-type:选择器匹配元素其父级是特定类型的第一个子元素   会循环迭代与元素下的所有标签
+				:nth-of-type:选择器匹配元素其父级是特定类型的第N个元素  会循环迭代与元素下的所有标签
+				:last-of-type:选择器匹配元素其父级是特定类型的最后一个子元素 会循环迭代与元素下的所有标签
+				:only-of-child:
+				
+				nth-of-type和nth-child区别：
+					type：类型
+					child:孩子
+					
+			
+			*/
+			html,
+			body,
+			div {
+				background: #FFF !important;
+			}
+
+			/* :first-child{
+			   background: #FF0000;
+		   }
+		
+			:last-child{
+				background: red;
+			}
+			
+			:first-of-type{
+				background: #990;
+			}
+			
+			:last-of-type{
+				background:forestgreen;
+			} */
+
+			/* 	p:nth-child(2n+1){
+				background: #ff0000;
+			} */
+
+
+
+			/* 	p:nth-child(3n+1) {
+				background: ##00FF00;
+			}
+
+			p:nth-child(3n+2) {
+				background: #0000ff;
+			}
+
+			p:nth-child(3n+0) {
+				background: #ff0000;
+			}
+ */
+			/* input:focus{
+			background: #8790A1;
+		}	 */
+			a:link {
+				/* 访问 前的样式*/
+				text-decoration: none;
+				color: #00FF00;
+			}
+
+			a:hover {
+				/* 鼠标移入时的样式 */
+				color: #F00;
+			}
+			a:visited{
+				/*访问后的样式 */
+				color: #0000FF;
+			}
+			a:active{
+				/* 鼠标按下时的样式  */
+				color: #FF0000;
+			}
+			
+			/*
+			:before、:after:		通过伪类的方式给元素添加一段文本内容，使用content属性
+			：checked 、:disabled 、:focus 都是针对表单元素的
+			*/
+			
+		</style>
+	</head>
+	<body>
+		<!-- <div id="theD">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+		</div> -->
+
+		<!-- <form action="" method="post">
+			<input type="text" />
+			<input type="text" />
+			<input type="text" />
+		</form> -->
+
+		<a href="#">连接1</a>
+		<a href="#">连接2</a>
+		<a href="#">连接3</a>
+		<a href="#">连接4</a>
+	</body>
+</html>

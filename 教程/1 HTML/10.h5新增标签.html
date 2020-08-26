@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5新增标签</title>
+</head>
+
+<body>
+    <form action="" method="GET">
+        用户名:&nbsp;&nbsp;<input type="text" name="name" autofocus="autofocus" placeholer="账号/用户名"
+            required="required"><br>
+        邮&nbsp;&nbsp;&nbsp;&nbsp;箱:&nbsp;&nbsp;<input type="email" name="email" required="required" placeholder="邮箱"
+            required="required"><br>
+        网站地址:
+        <input type="url" name="url" id="weburl" class="form-control" value="" required="required" title="网站地址"><br>
+        日期:
+        <input type="date" name="date" id="date" class="form-control" value="" title="日期"> <br>
+        周:
+        <input type="week" name="week" id="inputweek" class="form-control" value="" title="周">
+        颜色:
+        <input type="color" name="color" id="inputcolor" class="form-control" value="" title="颜色">
+        亮度:
+        <input type="range" name="range" id="inputrange" class="form-control" value="" min="0" max="100" step="1"
+            title="亮度"><br>
+        搜索:
+        <input type="search" name="search" title="搜索"><br>
+        视频播放:
+        <video controls="controls" autoplay="autoplay">
+            <source
+                src="https://vdept.bdstatic.com/79594334774332784d37444e41414c77/4c6a6c3472746344/f2820b1f69b63ed19638185eae98f0ddc41483c10face369ec40f928f34f705ebe9298e660bce05077597cc5914fed7b.mp4?auth_key=1584526134-0-0-01fa8dce6e8d1e38f81d6b2bd39bc1c9">
+        </video>
+        <br>
+        音频 :
+        <audio controls="controls">
+            <source
+                src="https://vdept.bdstatic.com/79594334774332784d37444e41414c77/4c6a6c3472746344/f2820b1f69b63ed19638185eae98f0ddc41483c10face369ec40f928f34f705ebe9298e660bce05077597cc5914fed7b.mp4?auth_key=1584526134-0-0-01fa8dce6e8d1e38f81d6b2bd39bc1c9"
+                type="">
+        </audio>
+        <br>
+        <!-- <input list="browsers" name="brower">
+还不兼容
+        <datalist id="browers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist> -->
+         
+       
+        <br>
+
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="一般按钮" onclick="alert('hello')">
+        <br>
+    </form>
+    <form action="" method="POST" enctype="multipart/form-data" name="form1">
+        <input type="file" name="file" id="files">
+        <input type="submit" value="提交文件">
+    </form>
+    
+</body>
+
+</html>

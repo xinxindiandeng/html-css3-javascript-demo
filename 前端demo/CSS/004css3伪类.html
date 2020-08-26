@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3伪类</title>
+    <style>
+        /* li:first-child {/*所有第一项变颜色*/
+        /* color: red;
+        } */
+        /*最后一个孩子变颜色*/
+        /* li:last-child {
+            color: blue;
+        } */
+        /*最后一个孩子变颜色*/
+        /* li:only-child {
+            color: salmon;
+        } */
+        /*设置第n个元素*/
+        /* li:nth-child(3) {
+            color: skyblue;
+        } */
+        /*奇数项  变颜色
+        或者2n+1
+        */
+        /* li:nth-child(odd) {
+            color: tan;
+        } */
+        /*偶数项变颜色 也可以写 2n*/
+        
+        li:nth-child(even) {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="one">html1</li>
+            <li class="two">css1</li>
+            <li class="three">css3</li>
+            <li class="four">html5</li>
+            <li class="col-one">javascript</li>
+            <li id="xol-md">jquery</li>
+            <li>Csharp</li>
+        </ul>
+    </div>
+    <div class="box-tow">
+        <ul>
+            <li>这是单独的一列</li>
+        </ul>
+    </div>
+</body>
+
+</html>

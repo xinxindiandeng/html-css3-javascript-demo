@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轮播图</title>
+		<style type="text/css">
+			div,ul,li,img {
+				margin: 0;
+				padding: 0;
+			}
+
+			div {
+				margin: 10px auto;
+				text-align: center;
+				height: 400px;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			li {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banner">
+			<ul>
+				<li><img src="img/banner1.jpg"></li>
+				<li><img src="img/banner2.jpg"></li>
+				<li><img src="img/banner3.jpg"></li>
+				<li><img src="img/banner4.jpg"></li>
+				<li><img src="img/banner5.jpg"></li>
+				<li><img src="img/banner6.jpg"></li>
+			</ul>
+		</div>
+		<script>
+			main();
+
+			function main() {
+
+
+				//获取标签元素
+				var obj1 = document.getElementById('banner');
+				//获取banner下li标签
+				var li = obj1.getElementsByTagName('li');
+				//测试代码  置顶图片
+				//li[0].style.zIndex=1;
+				//当前图片索引
+				var j = 0;
+				//下一张图片索引
+				var iIndex = 1;
+				//测试2 设置半透明
+				// li[5].style.opacity=0.5;
+				for (var i = 0; i < li.length; i++) {
+					if (i == j) {
+						li[i].style.opacity = '1';
+						continue;
+					}
+					li[i].style.opacity = '0';
+				}
+
+				function startRoll() {
+					j++;
+					if (j >= li.length) {
+						j = 0;
+					}
+					li[j].style.zIndex = iIndex;
+					iIndex++;
+					fadeIn(li[j], 1);
+				}
+
+				function fadeIn(obj, period) {
+					var COUNT = 50;
+					clearInterval(obj.timer);
+					obj.timer = setInterval(function() {
+						var opacityValue = Number.parseFloat(obj.style.opacity);
+						opacityValue += period / COUNT;
+						if (opacityValue < 1) {
+							obj.style.opacity = opacityValue;
+						} else {
+							obj.style.opacity = 1;
+							clearInterval(obj.timer);
+							for (var i = 0; i < li.length; i++) {
+								if (i == j) {
+									continue;
+								}
+								li[i].style.opacity = '0';
+							}
+						}
+					}, 1000 / COUNT);
+				}
+
+
+				var timer;
+				//定时调用函数
+				timer = setInterval(startRoll, 2000);
+
+			}
+		</script>
+	</body>
+</html>

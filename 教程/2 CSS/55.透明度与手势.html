@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>透明度-手势</title>
+		<style type="text/css">
+			/* 
+			opacity:0(透明)~1(不透明)
+					0.5(半透明)
+					注：占空间，所有子内容也会变透明
+			rgba：前三位颜色，第四位透明度
+					注：不影响子内容
+			
+			cursor：手势
+			defailt：默认箭头
+			要实现自定义手势：
+				准备图片：*.cur;*.ico
+			 */
+			#div1{
+				width: 100px;
+				height: 100px;
+				background-color: #ff0000;
+				opacity: 0.5;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background-color: rgba(255,0,0,0.5);
+				cursor:url(img/cursor.ico),auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			这是块1
+		</div>
+		<p>这是段落</p>
+		<div id="div2">
+		这是块2	
+		</div>
+		
+	</body>
+</html>

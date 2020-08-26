@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="SHORTCUT ICON" href="img/1.ico">
+    <title>005图片与超链接</title>
+	<base  target="_blank" /><!--全局url打开方式-->
+</head>
+<body>
+    <p>绝对路径</p>
+    <!--绝对路径-->
+    <img src="G:\我的代码\前端\html\1.jpg" alt="绝对路径">
+    <hr/>
+    <h2>相对路径</h2>
+    <p>上级目录</p>
+    <br/>
+    <a href="列表.html" target="_self" title="列表页"><img src="../1.jpg" alt="上级目录"></a>
+    <br/> 当前目录<br/>
+    <!-- 
+    _blank   在新的页面打开
+     在有框架的情况下
+    _self   在当前级别打开
+    _top    在根节点操作
+    _parent   在父节点打开
+
+-->
+    <a href="https://www.baidu.com" target="_blank" title="百度"><img src="1.jpg" alt="当前目录"></a>
+
+    <br/> 下级目录<br/>
+    <a href="#"> <img src="image/1.jpg" alt="下级目录"></a>
+    <br/>
+    <!-- 
+    <a href="https://wwww.baidu.com" target="_top" title="_top">百度</a><br>
+    <a href="https://wwww.baidu.com" target="_parent" title="parent">百度</a> -->
+    <p>超链接锚</p>
+
+    <!-- 
+        # #不加名称代表调到顶部
+        #名称  代表调准对应锚点
+     -->
+    <a href="#m1" name="目录1">目录1</a>&nbsp;
+    <a href="#m2" name="目录2">目录2</a>&nbsp;
+    <a href="#m3" name="目录3">目录3</a>&nbsp;
+    <br/>
+    <a href="#目录1" title="锚一" name="m1">锚一</a>
+    <br/>
+    <a href="#目录2" title="锚二" name="m2">锚二</a>
+    <br/>
+    <a href="#目录3" title="锚三" name="m3">锚三</a>
+
+    <br/>
+    <a href="#">返回顶部</a>
+    <a href="mailto:1453913486@qq.com">反馈意见</a>
+    <a href="1.rar">下载文件</a>
+</body>
+
+</html>

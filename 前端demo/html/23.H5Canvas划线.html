@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 Canvas 划线</title>
+		<script type="text/javascript">
+			function load() {
+				let c = document.getElementById("myC");
+				let context = c.getContext('2d');
+
+				context.moveTo(100, 100); //起始位置
+				//画线
+				context.lineTo(100, 200); //结束位置 宽
+				//矩形
+				context.lineTo(300, 200); //长
+				context.lineTo(300, 100);
+				context.lineTo(100, 100);
+				context.stroke(); //画图
+
+
+				//画矩形方法 不填充
+				context.strokeStyle = '#FF0000';
+				context.strokeRect(100, 100, 200, 100);
+				context.stroke(); //画图
+				//填充画
+				context.fillStyle = "#00FF00";
+				context.fillRect(300, 200, 100, 100);
+				context.stroke(); //画图
+
+				//画圆
+				context.beginPath();
+				context.arc(100, 75, 50, Math.PI / 2, true);
+				context.stroke(); //画图
+				context.closePath();
+
+				//画三角
+
+				context.beginPath();
+				context.moveTo(400, 100);
+				context.lineTo(500, 100);
+				context.lineTo(400, 200);
+				context.closePath();
+				context.stroke();
+
+			}
+
+			//清理画布
+			function ClearCanvas() {
+				let c = document.getElementById("myC");
+				let context = c.getContext('2d');			
+				context.clearRect(0, 0, 800, 450);
+			}
+			window.onload = function() {
+				load();
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<canvas id="myC" width="800" height="450" style="border:1px #000 solid">
+			你的浏览器不支持canvas;
+		</canvas>
+		<input type="button" id="butID" value="清除" onclick="ClearCanvas()" />
+	</body>
+</html>

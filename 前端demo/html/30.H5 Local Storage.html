@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 Local Storage</title>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+
+			function setItem() {
+				let key = $('key').value;
+				let value = $('value').value;
+				localStorage.setItem(key, value);
+				refreshDiv();
+			}
+
+			function getItem() {
+				let key = $('key').value;
+				alert(localStorage.getItem(key))
+			}
+
+			function removeItem() {
+				let key = $('key').value;
+				localStorage.removeItem(key);
+				refreshDiv();
+			}
+
+			function getKey() {
+				alert(`首key是:${localStorage.key(0)}`);
+			}
+
+
+			function getLength() {
+				alert(`localStorage Length is:${localStorage.length}`);
+			}
+
+			function getSpace() {
+				//只有IE支持
+				alert(`localStorage Remain Space is:${localStorage.remainingSpace}`);
+			}
+
+			function clearLocalSorage() {
+				localStorage.clear();
+				refreshDiv();
+			}
+
+			function refreshDiv() {
+				let res = ['LocalSorage.length:' + localStorage.length];
+				for (let i = localStorage.length; i >= 0; i--) {
+					let key = localStorage.key(i);
+					res.push(`${key}:${localStorage.getItem(key)}`)
+				}
+				$('showDiv').innerHTML = res.join('<br/>')
+			}
+			window.onload = function() {
+				refreshDiv();
+			}
+		</script>
+
+	</head>
+	<body>
+		<lable>key:</lable>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="key" /><br />
+		<label>value:</label>&nbsp;<input type="text" id="value" /><br /><br>
+		<button onclick="setItem()">设置本地存储</button>&nbsp;&nbsp;
+		<button onclick="getItem()">获取本地存储</button>&nbsp;&nbsp;
+		<button onclick="removeItem()">移除本地存储</button>&nbsp;&nbsp;
+		<button onclick="clearLocalSorage()">清空本地存储</button>&nbsp;&nbsp;
+		<button onclick="getKey()">读取key</button>&nbsp;&nbsp;
+		<button onclick="getLength()">本地存储长度</button>&nbsp;&nbsp;
+		<button onclick="getSpace()">本地永久保存</button>
+
+		<div id="showDiv"></div>
+
+	</body>
+</html>

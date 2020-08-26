@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>宽和高</title>
+		<style type="text/css">
+			/*
+			宽和高
+				元素宽度和高度
+				元素的实际宽度和高度   border padding
+				元素的总宽度和高度  border padding margin
+			*/
+		   .box{
+			   width: 200px;
+			   height:200px;
+			   background-color: red;
+			   border: 10px solid  #0000FF;		   
+			   /*实际宽度可以用box-sizing  改变盒子展示形态
+			   默认值：context-box：width，height->content 
+			   border-box:width height ->content padding boder
+			   */
+			   box-sizing: border-box;
+			   /* 手势 */
+			   cursor: help;
+		   }
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+	</body>
+</html>

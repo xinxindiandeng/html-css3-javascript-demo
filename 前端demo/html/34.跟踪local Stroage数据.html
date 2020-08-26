@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>跟踪local storage数据</title>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+			var errorMessage = undefined;
+
+			function BwTable(warp) {
+				this.warp = (warp == undefined) ? true : warp;
+				this.rows = new Array();
+				this.header = [];
+
+				this.setHeader = function(row) {
+					this.header = row;
+				}
+
+				this.addRow = function(now) {
+					this.rows.push(row);
+				}
+
+				this.getRow = function(index) {
+					return this.rows[index];
+				}
+
+				this.countRows = function() {
+					return this.rows.length;
+				}
+
+				this.getTableHTML = function() {
+					let a = '';
+					if (this.warp) {
+						if (this.warp) a += '<table class="bwTable">\n';
+					}
+					a += this.getHeaderHTML();
+					for (let row in this.rows) {
+						a += this.getRowHTML(this.rows[row]);
+					}
+					if (this.warp) {
+						a += '</table>\n';
+					}
+					return a;
+				}
+
+				this.getHeaderHTML = function() {
+					if (this.header.length == 0) return '';
+					let a = '<tr>';
+					for (let cell in this.header) {
+						a += '<th>' + this.header[cell] + '</th>';
+					}
+					a += '</tr>\n';
+					return a;
+				}
+
+				this.getRowHTML = function(row) {
+					let a = '<tr>';
+					for (let cell in row) {
+						let v = row[cell];
+						if (v == null) {
+							v = '<span class="red"> null</span>';
+						}
+						a += '<td>' + v + '</td>';
+					}
+					a += '</tr>';
+					return a;
+				}
+				this.writeTable = function() {
+					document.write(this.getTableHTML());
+				}
+			}
+
+			function dispError(message) {
+				errorMessage = '<p class="error">' + message + '</p>';
+
+			}
+			let t=new BwTable();
+			const db = getLocalStorage() || dispError('not support local Storage');
+
+			function getLocalStorage() {
+				try {
+					if (!window.localStorage) {
+						return window.localStorage;
+					}
+				} catch (e) {
+					return undefined;
+				}
+			}
+
+			function dispResults() {
+				if (errorMessage) {
+					$('results').innerHTML = errorMessage;
+					return;
+				}
+				t = new BwTable();
+				t.addRow(['traveler',db.getItem('traveler')]);
+				t.addRow(['destination',db.getItem('destination')]);
+				t.addRow(['transportation',db.getItem('transportation')]);
+				
+				$('results').innerHTML=t.getTableHTML();
+			}
+				
+			function dbGO(){
+				if(errorMessage){
+					return;
+				}
+				let f=$('travelForm');
+				db.setItem('traveler',f.elements['traveler'].value);
+				db.setItem('destination',f.elements['destination'].value);
+				db.setItem('transportation',f.elements['transportation'].value);
+				dispResults();
+				
+			}
+			function dbClear(){
+				if(errorMessage){
+					return;
+				}
+				db.clear();
+				dispResults();
+			}
+			
+			window.onload=function(){
+				dispResults();
+			}
+		</script>
+	</head>
+
+	<body>
+		<section id="content">
+			<h1>LocalStorage</h1>
+			<form action="#" method="post" id="travelForm">
+				<table>
+					<tr>
+						<td class="label"> Traveler</td>
+						<td><input type="text" name="traveler"></td>
+					</tr>
+					<tr>
+						<td class="label"> Destination</td>
+						<td><input type="text" name="destination"></td>
+					</tr>
+					<tr>
+						<td class="label"> Transportation</td>
+						<td><input type="text" name="transportation"></td>
+					</tr>
+					<tr>
+						<td clospan="2" class="button">
+							<input id="formSubmit1" type="button" value="Clear" onclick="dbClear()" />
+							<input id="formSubmit2" type="button" value="GO" onclick="dbGO()" />
+						</td>
+					</tr>
+				</table>
+				<input type="hidden" id="inputAction" name="action" value="add">
+				<input type="hidden" id="inputKey" name="key" value="0">
+
+			</form>
+		</section>
+		<section id="results"></section>
+	</body>
+</html>

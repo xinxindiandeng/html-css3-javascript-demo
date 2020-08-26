@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>js应用方式</title>
+    <!-- src 的值URL 可以是站内路径 也可以是外部站点路径 -->
+    <!-- 指定外部引用脚本使用编码 同步加载 -->
+    <script src="js/1.0引用demo.js" charset="utf-8"></script>
+    <!-- 延时加载 对网页内容不变时使用 只支持IE -->
+    <script src="js/2.NumberDemo.js" defer="defer"></script> 
+    <!-- 外部脚本时 可以使用 async 属性  异步加载-->
+    <script src="js/1.1asyncdemo.js" async="async"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+console.log("这是直接引用");
+</script>  
+<!-- 备注：外部引用 框架可以放在head中，自定义js引用放在body末尾（html是自上往下解析的，当有js未加载完成时会卡在未加载完成为止） -->
+</body>
+</html>

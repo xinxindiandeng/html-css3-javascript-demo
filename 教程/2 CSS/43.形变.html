@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>形变 transform</title>
+		<style type="text/css">
+			/*
+			transform
+				用于内联或者块元素，可以旋转，缩放，移动元素
+				Webkit:-webkit-transform
+				Gecko:-moz-transform
+				Presto-o-transform
+				IE：暂不支持
+			*/
+			
+			div{
+				margin: 100px;
+				background-image: url(img/logo.jpg);
+				width: 200px;
+				height: 80px;
+				-webkit-transition:-webkit-transform 2s ease-in;
+			}
+			div:hover{
+				/*旋转*/ 
+				/* -webkit-transform: rotate(180deg);*/
+				/* 缩放 */
+				/* -webkit-transform:scale(2,0.5); */
+				 /* 移动 */
+				/* -webkit-transform:translate(200px,100px); */
+				 
+				 /* 倾斜 */
+				/*  -webkit-transform:skew(15deg,15deg); */
+				/* 综合 */
+				 -webkit-transform:rotate(180deg) scale(2,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			
+		</div>
+	</body>
+</html>

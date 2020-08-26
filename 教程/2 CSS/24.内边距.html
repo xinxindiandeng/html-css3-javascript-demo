@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>内边距</title>
+		<style type="text/css">
+			/* 内边距
+				外边距会产生交叠，内边距不会，没有边框时也可以使用
+				内边距代替外边距
+				内边距的部分可以由背景图片修饰
+				内边距可以影响边框的大小
+			 */
+				
+				div{
+					width: 500px;
+					height: 50px;
+				}
+				.box1{
+					margin-bottom: 50px;
+					border: 1px solid #0F0;
+					background-color: #0F0;
+				}
+				.box2{
+					margin-top: 50px;  /*margin 会重叠 以大的算*/
+					/* padding-top: 50px; */
+					background-color: #FF0000;
+					border: 1px solid #000;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box1">BOX1</div>
+		<div class="box2">BOX2</div>
+	</body>
+</html>

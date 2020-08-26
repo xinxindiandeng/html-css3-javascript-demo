@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位参考对象包含块</title>
+		<style type="text/css">
+			/*
+			绝对定位
+			父元素包含position,就是包含块
+			子元素定位会往上找父级包含块，如果上级没有会一直往上找一直到body结束
+			
+			*/
+			
+				body,div,h1,h2{
+					margin: 0;
+					padding: 0;
+				}
+				body{
+					margin: 25px;
+					padding: 50px;
+					position: absolute;
+				}
+				#container{
+					position: relative;
+					border: solid 1px #F00;
+				}
+				#container h2{
+					position: absolute;
+					/*参考定位 浏览器窗口 左上角为原点定位*/
+					left: 0;
+					top: 0;
+					border:solid 1px #000;
+				}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>ABCD</h1>
+			<div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>				
+			</div>
+			<h2>1234</h2>
+		</div>
+
+	</body>
+</html>

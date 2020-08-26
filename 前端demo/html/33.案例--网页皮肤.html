@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网页皮肤</title>
+		<style type="text/css">
+			div#divblock {
+				width: 500px;
+				height: 500px;
+				background-color: #000000;
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+
+			function redSet() {
+				let value = '#FF0000';
+				$('divblock').style.backgroundColor = value;
+				window.localStorage.setItem('divBackGroundColor', value)
+			}
+
+			function greenSet() {
+				let value = '#00FF00';
+				$('divblock').style.backgroundColor = value;
+				window.localStorage.setItem('divBackGroundColor', value)
+			}
+
+			function blueSet() {
+				let value = '#0000FF';
+				$('divblock').style.backgroundColor = value;
+				window.localStorage.setItem('divBackGroundColor', value)
+			}
+
+			function colorload() {
+				let backColor = window.localStorage.getItem('divBackGroundColor');
+				if (backColor) {
+					$('divblock').style.backgroundColor = backColor;
+					console.log(`backColor:$(backColor)`);
+				}
+			}
+			window.onload = function() {
+				colorload();
+			}
+		</script>
+	</head>
+	<body>
+
+		<button onclick="redSet()" id="redbutton">红色</button>
+		<button onclick="greenSet()" id="greenbutton">绿色</button>
+		<button onclick="blueSet()" id="bluebutton">蓝色</button>
+		<div id="divblock">
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 Canvas 图形变换--缩放</title>
+		<script type="text/javascript">
+			//平移
+			function load() {
+				let c = document.getElementById("myC");
+				let ctx = c.getContext('2d');
+				
+				ctx.translate(250,20);
+				for(let i=1;i<80;i++){		
+					ctx.translate(30,30);//重置原点位置
+					ctx.scale(0.95,0.95);//缩放  线性缩放
+					ctx.rotate(Math.PI/12);//旋转绘图
+					ctx.beginPath();//重置当前路径
+					ctx.fillStyle="#F00";
+					ctx.globalAlpha="0.4";//透明度
+					ctx.arc(0,0,50,0,Math.PI*2,true)
+					ctx.closePath();//创建从当前点回到起始点的路径
+					ctx.fill();
+				}
+
+			}
+
+			//清理画布
+			function ClearCanvas() {
+				let c = document.getElementById("myC");
+				let context = c.getContext('2d');
+				context.clearRect(0, 0, 800, 450);
+			}
+			window.onload = function() {
+				load();
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<canvas id="myC" width="800" height="450" style="border:1px #000 solid">
+			你的浏览器不支持canvas;
+		</canvas>
+		<input type="button" id="butID" value="清除" onclick="ClearCanvas()" />
+	</body>
+</html>

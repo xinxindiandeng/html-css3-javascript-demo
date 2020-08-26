@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Hack</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: #000;
+				margin: 20px;
+			}
+			#div1{
+				background: #F00!important;/*对其他浏览器的设置*/
+				background: #0000FF;/*for IE6 only*/
+			}
+			
+			#div2{
+				background: #f00;
+				*background: #00f;/*for IE6 only*/
+			}
+		
+			/* 对于其他浏览器,加了important,优先级最高,所以,显示为红色
+			 对于IE6而言，IE6不认识important,所以背景变为蓝色
+			 
+			 */
+			
+		</style>
+	</head>
+	<body>
+		
+		<!-- CSS hack ,利用同一种语法，在不同浏览器上效果不一样，来达到适配性 -->
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>

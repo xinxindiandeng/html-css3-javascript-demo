@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS引用方式</title>
+		<!-- CSS 优先级规则
+			1.行内（内联）样式>内部样式>外部样式
+			2.同级样式 后声明会优先前声明
+			3.内部样式和外部样式，谁的声明靠后谁优先
+			4.同级声明中，选择器重复声明时，不同属性就继承，相同属性后面值覆盖前面值 
+		-->
+		<!-- <style type="text/css">
+			p {
+				color: #00FFFF;
+				margin-left: 10px;
+			}
+		</style> -->
+		<link rel="stylesheet" href="CSS/4.样式优先级.css">
+		<!-- <style type="text/css">
+			@import url("CSS/1.css样式引用.css");
+			/*import引用位置必须在声明最前面 */
+			/*  p{color:blue; } */
+		</style> -->
+
+
+	</head>
+	<body>
+		<!-- <p style="color:goldenrod;margin-left: 40px;">
+			样式
+		</p> -->
+		<p>
+			样式
+		</p>
+		<h1>
+			外部样式
+		</h1>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>WEBSQL</title>
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+			const db = openDatabase('mydb', '1.0', 'Test DB',
+				2 * 1024 * 1024);
+			let msg;
+			db.transaction(
+				function(tx) {
+					tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS(id unique,log)');
+					tx.executeSql('INSERT INTO LOGS(id,log) VALUES(1,"foobar")');
+					tx.executeSql('INSERT INTO LOGS(id,log) VALUES(2,"logmsg")');
+					msg = '<p> success to create table and insert info</p>';
+					$('status').innerHTML += msg;
+				}
+			); //事务
+
+			db.transaction(
+				function(tx) {
+					tx.executeSql('select * from LOGS', [], function(tx, results) {
+						let len = results.rows.length;
+						msg = '<p> rows:' + len + '</p>';
+						$('status').innerHTML += msg;
+
+						for (let i = 0; i < len; i++) {
+							msg = '<p>' + results.rows.item(i).log + '</p>';
+							$('status').innerHTML += msg;
+						}
+					}, function(tx, error) {
+						console.log(error);
+					});
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="status">
+
+		</div>
+	</body>
+</html>

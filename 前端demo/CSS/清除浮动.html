@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>清除浮动</title>
+    <style>
+        .mybox {
+            width: 900px;
+            height: 800px;
+            border: 1px solid gray;
+            margin: 10px auto;
+        }
+        
+        .box_left {
+            width: 600px;
+            height: 500px;
+            border: 1px solid blue;
+            margin: 10px;
+            float: left;
+        }
+        
+        .box_right {
+            width: 250px;
+            height: 500px;
+            border: 1px solid blue;
+            margin: 10px;
+            float: right;
+        }
+        
+        .clear {
+            width: 870px;
+            height: 100px;
+            margin-left: 10px;
+            border: 2px solid red;
+            /*为了不使浮动不占空间，需要清除浮动*/
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mybox">
+        <div class="box_left"></div>
+        <div class="box_right"></div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

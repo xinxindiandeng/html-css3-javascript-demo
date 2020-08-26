@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS圆角</title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+
+				/* 以半径为20的圆与四角相切 */
+				/* border-radius: 20px; */
+				/* 圆 */
+				/* border-radius: 50%; */
+				/* 对角相切 左上-右下 以10为半径的圆下切；右上-左下 以20为半径的圆相切 */
+				/* border-radius: 10px 20px; */
+				/* 左上---右上，左下---右下 */
+				/* border-radius: 10px 20px 30px; */
+
+				/* 左上---右上---左下---右下 */
+				/* border-radius: 10px 20px 30px 40px; */
+
+				/* 椭圆 */
+				/* border-radius: 10px/20px; */
+			}
+
+			#box {
+				width: 300px;
+				height: 150px;
+				background-color: red;
+				border-radius: 150px 150px 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

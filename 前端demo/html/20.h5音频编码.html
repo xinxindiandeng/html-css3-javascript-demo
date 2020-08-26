@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5音频</title>
+		<script type="text/javascript">
+			//函数主体 检测是否支持audio元素
+			function checkAudio() {
+				let myAudio = document.createElement('audio');
+				if (myAudio.canPlayType) {
+					if ('' != myAudio.canPlayType('audio/mpeg')) {
+						console.log("支持mp3");
+					}
+					if ('' != myAudio.canPlayType('audio/ogg;codecs="vorbis"')) {
+						console.log("支持ogg");
+					}
+					if ('' != myAudio.canPlayType('audio/mp4;codecs="mp4a.40.5"')) {
+						console.log("支持MP4");
+					}
+
+				} else {
+					cosole.log("不支持audio元素");
+				}
+			}
+
+			//调用函数
+			window.onload = function() {
+				checkAudio();
+			}
+			
+			function ShowInfo(){
+				let myC=document.getElementById('controlID');
+				console.log("音频地址：",myC.currentSrc);
+				console.log("已播放时长：",myC.currentTime);
+				console.log("音频长度",myC.duration);
+				console.log("是否播放结束：",myC.ended);
+				console.log("是否播放",myC.played);
+				console.log("是否暂停",myC.paused);
+				console.log("声音大小",myC.volume);
+				console.log("是否跳跃音频播放",myC.seeking);
+			}
+
+			//控制播放
+			function PlayOrPause() {
+				let myA = document.getElementById('myAID');
+				let myB = document.getElementById('btnID')
+				if (myA.paused) {
+					myA.play();
+					myB.value = "停止";
+
+				} else {
+					myA.pause();
+					myB.value = "播放";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<audio  id="controlID" controls="controls">
+			<source src="audio/磯村由紀子%20-%20風の住む街.mp3" type="audio/mp3">
+			你的浏览器并不支持audio
+		</audio>
+		<input type="button"  id="butID1" value="Show Info" onclick="ShowInfo()" />
+		<br/>
+		
+		<audio id="myAID" controls="controls">
+			<source src="audio/磯村由紀子%20-%20風の住む街.mp3" type="audio/mp3">
+			你的浏览器并不支持audio
+		</audio>
+		<br />
+		<input type="button" id="btnID" value="control" onclick="PlayOrPause()" />
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 WEB Storage 监听</title>
+		<!-- 配合网页 30.H5 Local Storage.html -->
+		<script type="text/javascript">
+			function StorageHandler(e) {
+			e=e||window.StorageEvent;
+			console.log(e);
+			}
+			window.addEventListener('storage',StorageHandler,false);
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

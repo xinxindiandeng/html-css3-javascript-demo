@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS使用方法</title>
+    <!-- 
+        内部样式
+        <style type="text/css">
+         p {
+            color: blue;
+        }      
+        </style>
+    -->
+
+    <!-- 外部样式 -->
+    <!-- <link href="CSS.css" rel="stylesheet" type="text/css"> -->
+    <style type="text/css">
+        /* @import "CSS.css" */
+        /* 内部引用样式 */
+        
+        @import url(CSS.css)
+    </style>
+
+</head>
+
+<body>
+    <!--行内样式-->
+    <h1 style="color:red;font-size:20px;">Css使用方法</h1>
+    <!--嵌入样式-->
+    <p>行内样式</p>
+    <p>嵌入样式</p>
+    <p>外部样式</p>
+    <p>导入样式</p>
+</body>
+
+</html>

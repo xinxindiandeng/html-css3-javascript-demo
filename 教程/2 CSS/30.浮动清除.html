@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动清除</title>
+		<style type="text/css">
+			/* 
+			
+			
+			 清除浮动：
+			 上下排列：clear属性，表示清除浮动的  left right both
+			 
+			嵌套浮动：
+			利用clear属性清除float浮动：
+				父元素固定宽高：不推荐，不能把高度固定死，不适合做自适应的效果
+				父元素浮动：不推荐，因为父容器浮动也会影响后面的元素
+				overflow:hidden(BFC规范)，如果有子元素想溢出，那么会受到影响
+				dispaly:inline-block(BFC规范)，不推荐，父容器会影响到后面的元素
+				设置空标签：不推荐，会多添加一个标签
+				after伪类：推荐，是空标签的加强版，目前各大公司做法
+					(clear属性只会操作块标签，对内联标签不起作用)
+			 
+			 */
+		/* 	
+		案例1
+		
+		#header,#left,#middle,#right,#footer{
+				border: 1px solid #00F;
+				height: 50px;
+			}
+			#header{
+				width: 100%;
+			}
+			#left,#middle,#right{
+				width: 33%;
+				float: left;
+			}
+			#left{
+				height: 100px;
+			}
+			
+			.clear{
+				clear: both;
+			}
+			
+			#footer{
+				border:1px solid #000;
+			} */
+			/* 固定宽高：不推荐，不能把高度固定死，不适合做自适应的效果
+			#box1{width: 200px;height:200px; border: 1px #000000 solid; }
+			#box2{width: 100px;height: 200px;background: blue;float: left;} */
+			
+			/* 父元素浮动：不推荐，因为父容器浮动也会影响后面的元素 */
+			/* #box1{ border: 1px #000000 solid;  float: left;}
+			#box2{width: 100px;height: 200px;background: blue;float: left;} */
+			
+			/* overflow:hidden(BFC规范)，如果有子元素想溢出，那么会受到影响 */
+			/* #box1{ border: 1px #000000 solid;overflow: hidden;}
+			#box2{width: 100px;height: 200px;background: blue;float: left;} */
+			
+			/* dispaly:inline-block(BFC规范)，不推荐，父容器会影响到后面的元素 */
+			/* #box1{border: 1px #000000 solid;display: inline-block;}
+			#box2{width: 100px;height: 200px;background: blue;float: left;} */
+			
+			/* 设置空标签：不推荐，会多添加一个标签 */
+			/* #box1{border: 1px #000000 solid;}
+			#box2{width: 100px;height: 200px;background: blue;float: left;}
+			#box3{clear: left;} */
+			
+			/* after伪类：推荐，是空标签的加强版，目前各大公司做法
+				(clear属性只会操作块标签，对内联标签不起作用) */
+			#box1{ border: 1px #000000 solid;}
+			#box2{width: 100px;height: 200px;background: blue;float: left;}
+			#box3:after{content: '';clear: both;display: block;}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 
+		案例1 添加空白标签
+		<div id="header">header</div>
+		<div id="left">left</div>
+		<div id="middle">middle</div>
+		<div id="right">right</div>
+		<div class="clear"></div>
+		<div id="footer">footer</div> -->
+		
+		<div id="box1">
+			<box id="box2"></box>
+			<div id="box3">
+			</div>
+		</div>
+		aaaaa
+	</body>
+</html>

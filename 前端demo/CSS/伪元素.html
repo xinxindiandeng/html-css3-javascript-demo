@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 250px;
+            height: 450px;
+            border: 1px solid blue;
+            padding: 4px 2px;
+            margin: 0 auto;
+        }
+        
+        .box:first-letter {
+            /*第一个字*/
+            color: red;
+            font-size: 80px;
+            font-weight: bold;
+            folat: left;
+            padding: 5px;
+        }
+        
+        .box:first-line {
+            /*第一行*/
+            color: blue;
+        }
+        
+        .box::before {
+            /*第一行插入数据*/
+            content: "呵呵呵";
+        }
+        
+        .box::after {
+            /*末尾插入数据*/
+            content: "这是结尾";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        故事的背景是在1795年东印度公司殖民统治印度期间， 殖民统治者想要抓住反抗组织“阿扎德”的领袖于是找来了混混弗朗基充当间谍， 但弗朗基在潜伏过程中却有了另外的想法，一段充满了意料之外的动作冒险故事由此展开。 故事的背景是在1795年东印度公司殖民统治印度期间， 殖民统治者想要抓住反抗组织“阿扎德”的领袖于是找来了混混弗朗基充当间谍， 但弗朗基在潜伏过程中却有了另外的想法，一段充满了意料之外的动作冒险故事由此展开。
+    </div>
+</body>
+
+</html>

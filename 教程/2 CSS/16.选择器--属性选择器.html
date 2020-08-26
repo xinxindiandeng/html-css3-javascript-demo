@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性选择器</title>
+		<style type="text/css">
+			/* 属性选择器
+			M[attr]{}
+			=:完全匹配
+			*=:部分匹配
+			^=:起始匹配
+			$=:结束匹配
+			[][][]:组合匹配
+			*/
+			
+			/* [title1]{
+				background: #F00;
+			}
+			[title="cls3"]{
+				background: #0f0;
+			} */
+			/* 以什么开头
+			[title^='cls']{
+				background: #00f;
+			} */
+			/* 以什么结尾 */
+			/* [title$='3']{
+				background: red;
+			} */
+			/* 包含 */
+			/* [title*='cls']{
+				background: #00F;
+			} */
+			/* 只包含确定属性 */
+			/* [title~='cls']{
+				background: #00F;
+			} */
+			[class][id]{
+				background-color: #0000FF;
+			}
+		
+			
+		</style>
+	</head>
+	<body>
+		<div title1>0001</div>
+		<div title1="cls2">0002</div>
+		<div title="cls3">0003</div>
+		<div title="cls3">0003</div>
+		<div title="cls3">0003</div>
+		<div title="cls4">0004</div>
+		<div title="cls5 cls">0005</div>
+		<div title="cla5">0005</div>
+		<div title="cla3">0005</div>
+		<div id="divID">0006666</div>
+		<div class="cls3" id="divID">00007777</div>	
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 SessionStorage</title>
+		<script type="text/javascript">
+			function checkStorageSupport(){
+				if(window.sessionStorage){
+					console.log('支持 sessionStorage!');
+				}else{
+					console.log('不支持 sessionStorage');
+				}
+				if(window.localStorage){
+					console.log('支持 localStorage');
+					
+				}else{
+					console.log('不支持  localStorage');
+				}
+			}
+			
+			window.onload=function(){
+				checkStorageSupport();
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
