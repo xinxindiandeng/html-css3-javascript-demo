@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation动画</title>
+
+		<style>
+			/* animation-name:设置动画的名字（自定义）
+			animation-duration:动画的持续时间
+			annimation-delay:动画的延迟时间
+			animation-iteration-count:动画的重复次数,默认值就是1，infinite 无限次
+			animation-timing-function:动画的运动形式
+			 
+			注：
+			 1.运动结束后，默认回到起始位置
+			 2.from->0%,to->100%
+			 
+			 */
+
+
+
+			.box1 {
+				width: 300px;
+				height: 300px;
+				border: 1px solid #000000;
+				margin: 30px auto;
+
+			}
+
+			.box2 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				/* animation-name: myBox;
+				animation-duration: 4s;
+				animation-iteration-count: infinite; */
+				animation: myBox 4s 2s infinite linear;
+
+			}
+
+			@keyframes myBox {
+
+				/* 起始位置 */
+				/* from{
+					
+					transform: translate(0,0);
+				} */
+				/* 结束位置 */
+				/* to{
+					
+					transform: translate(200px,0);
+				} */
+				0% {
+					transform: translate(0, 0);
+				}
+
+				25% {
+					transform: translate(200px, 0);
+				}
+
+				50% {
+					transform: translate(200px, 200px);
+				}
+
+				75% {
+					transform: translate(0, 200px);
+				}
+
+				100% {
+					transform: translate(0, 0);
+				}
+
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

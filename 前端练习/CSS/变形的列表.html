@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>变形列表</title>
+		<style type="text/css">
+			ul {
+				width: 250px;
+				margin: 30px auto;
+				list-style: none;
+				overflow: hidden;
+			}
+
+			ul li {
+				height: 97px;
+				border-bottom: 1px #d0d6d9 dashed;
+				margin-bottom: ;
+				overflow: hidden;
+				position: relative;
+			}
+
+			ul li:last-child {
+				border-bottom: none;
+			}
+
+			.list_photo {
+				float: left;
+				width: 112px;
+				height: 77px;
+				margin: 10px 9px 0 5px;
+				position: relative;
+
+			}
+
+			.list_photo img {
+				width: 100%;
+				display: inline-block;
+				float: left;
+			}
+
+			.list_photo_border {
+				width: 92px;
+				height: 57px;
+				border: 1px white solid;
+				position: absolute;
+				left: 9px;
+				top: 9px;
+				transform-origin: 0 0;
+				transform: translate(0, -60px) rotate(-90deg);
+				transition: 1s;
+
+
+			}
+
+			.list_photo_text {
+				width: 100%;
+				position: absolute;
+				color: white;
+				text-align: center;
+				bottom: 25px;
+				font-size: 14px;
+				transform: translate(0, 100px);
+				transition: 1s;
+			}
+
+			li:hover .list_photo_border {
+				transform: translate(0, 0) rotate(0);
+			}
+
+			li:hover .list_photo_text {
+				transform: translate(0, 0);
+			}
+
+			.list_text {
+				float: left;
+				width: 114px;
+				font-size: 12px;
+				line-height: 21px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+
+				<div class="list_photo">
+					<img src="img/list_photo.png">
+					<div class="list_photo_border">
+
+					</div>
+					<div class="list_photo_text">
+						陌陌上市了
+					</div>
+
+				</div>
+				<div class="list_text">
+					测试文本测试文本测试文本
+					测试文本测试文本测试文本
+				</div>
+			</li>
+			<li>
+
+				<div class="list_photo">
+					<img src="img/list_photo.png">
+					<div class="list_photo_border">
+
+					</div>
+					<div class="list_photo_text">
+						陌陌上市了
+					</div>
+
+				</div>
+				<div class="list_text">
+					测试文本测试文本测试文本
+					测试文本测试文本测试文本
+				</div>
+			</li>
+			<li>
+
+				<div class="list_photo">
+					<img src="img/list_photo.png">
+					<div class="list_photo_border">
+
+					</div>
+					<div class="list_photo_text">
+						陌陌上市了
+					</div>
+
+				</div>
+				<div class="list_text">
+					测试文本测试文本测试文本
+					测试文本测试文本测试文本
+				</div>
+			</li>
+			<li>
+
+				<div class="list_photo">
+					<img src="img/list_photo.png">
+					<div class="list_photo_border">
+
+					</div>
+					<div class="list_photo_text">
+						陌陌上市了
+					</div>
+
+				</div>
+				<div class="list_text">
+					测试文本测试文本测试文本
+					测试文本测试文本测试文本
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>
