@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation拓展</title>
+		<style type="text/css">
+			/* 
+			 animation-fill-mode:规定动画播放之前或之后，其动画效果是否可见
+				none(默认值)：在运动结束之后回到初始位置，在延迟的情况下，让0%在延迟后生效
+				backwards:在延迟的情况下，让0%在延迟前生效
+				frowards:在运动结束之后，停到结束位置
+				both:backwards和forwards同时生效
+			 */
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin-top: 5px;
+			}
+			/* .box1{
+				animation: move 3s  1s;
+			} */
+			/*开始之前就生效*/
+		/* 	.box2{
+				animation: move 3s  1s;
+				animation-fill-mode: backwards;
+			}
+			.box3{
+				animation: move 3s  1s;
+				animation-fill-mode: forwards;
+			}
+			.box4{
+				animation: move 3s  1s;
+				animation-fill-mode: both;
+			}
+			@keyframes move{
+				0%{transform: translate(0,0); background: blue;}
+				100%{transform: translate(300px,0);}
+			} */
+			
+			/* 
+			animation-direction:属性定义是否应该轮流反向播放动画
+			alternate:一向正向（0%~~100%），一次反向（100%~~0%）
+			reverse：永远都是反向，从100%~~0%
+			normal:(默认值) 永远都是正向，从0%~~100%
+			 
+			 */
+			.box1{
+				animation:2s move  infinite;
+				animation-direction: alternate;
+			}
+			@keyframes move{
+				0%{transform: translate(0,0); background: blue;}
+				100%{transform: translate(300px,0);}
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3D语法</title>
+		<style type="text/css">
+			/* 
+			 perspective:离屏幕多远的距离去观察元素，值越大幅度越小（景深）
+			 perspective-origin:景深-基点位置，观察元素的角度
+			 transform-origin:x,y,z (z轴只支持像素不支持单词)
+			 transform-style:3D空间
+				flat：(默认值2D)，preserve-3d(3d，产生一个三维空间)
+			backface-visibility:背面隐藏
+				hidden，wisible(默认值)
+			 */
+			body{
+				overflow: hidden;
+			}
+			
+			.box1 {
+				width: 300px;
+				height: 300px;
+				border: 1px black solid;
+				margin: 30px auto;
+				perspective: 200px;
+			}
+
+			.box2 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 100px;
+				transition: 1s;
+				transform:rotateX(0) ;
+			}
+			.box1:hover .box2{
+				transform:rotateX(180deg) ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2">aaa</div>
+		</div>
+	</body>
+</html>
