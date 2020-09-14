@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字体图标</title>
+		<link rel="stylesheet" type="text/css" href="CSS/iconfont.css"/>
+		<style type="text/css">
+			/* 
+			 font-face是CSS3中的一个模块，他主要是把自己定义的web字体嵌入到你的网页中
+				好处：
+					1.可以非常方便的改变大小颜色
+					2.放大后不会失真
+					3.减少请求次数和提高加载速度
+					4.简化网页布局
+					5.减少设计师和前端工程师的工作量
+					6.可使用计算机没有提供的字体
+			 使用：
+				@font-face语法
+					像.woff等文件都是做兼容平台处理，mac，linux等
+			 */
+			/* @font-face {
+				font-family: hello;
+				src: url(https://at.alicdn.com/t/font_403341_n8tj33yn5peng66r.eot);
+				src: url(https://at.alicdn.com/t/font_403341_n8tj33yn5peng66r.eot?#iefix) format('embedded-opentype'),
+					url(https://at.alicdn.com/t/font_403341_n8tj33yn5peng66r.woff) format('woff'),
+					url(https://at.alicdn.com/t/font_403341_n8tj33yn5peng66r.ttf) format('truetype'),
+					url(https://at.alicdn.com/t/font_403341_n8tj33yn5peng66r.svg#iconfont) format('svg');
+			}
+
+			div {
+				font-family: hello;
+			}
+
+			span {
+				font-family: hello;
+			} */
+			.icon {
+			  width: 1em;
+			  height: 1em;
+			  vertical-align: -0.15em;
+			  fill: currentColor;
+			  overflow: hidden;
+			}
+		</style>
+		
+		<script src="CSS/iconfont.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<span class="iconfont icongouwucheman"></span>
+		<svg class="icon" aria-hidden="true">
+		  <use xlink:href="#icongouwuche"></use>
+		</svg>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>渐变</title>
+		<style type="text/css">
+			/*  
+			1.线性渐变-->linner-gradient是值，需要添加background-image属性上
+				注：渐变的0度是在页面在下边，正直会按照顺时针旋转，负值按逆时针旋转
+			2.径向渐变--->radial-gradient
+			*/
+		   .box{
+		   	width:300px;
+			height: 300px;
+			border: 1px black solid;
+			/* background-image: linear-gradient(red,blue,yellow); */
+			/* 改变颜色方向 */
+			/* background-image: linear-gradient(to top,red,blue); */
+			/* 颜色位置设置 */
+			/* background-image: linear-gradient(red 25%,blue 75%) */
+			background-image: radial-gradient(red,blue,yellow);
+			
+		   }
+		</style>
+
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
