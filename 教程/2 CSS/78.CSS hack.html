@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSSHack</title>
+		<style type="text/css">
+			/* 
+			CSS hack 用来解决浏览器的兼容性问题，为不同版本的浏览器定制编写不同的CSS效果，使用每个浏览器单独是被的样式代码，控制浏览器的显示样式
+			
+			Hack分类
+				1.CSS属性前缀发
+				2.选择器前缀发
+				3.IE条件注释发
+			 
+			 */
+			/* 1.CSS属性前缀发 */
+			
+			/* .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+				
+			} */
+			/* ie6 */
+			/* .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;			
+				_background: blue;
+				
+			} */
+			/* ie7 */
+			/* .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+				+background: blue;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+				*background: blue;
+			} */
+			
+			/* ie6~9 */
+			/* .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+				background: blue\9;
+			} */
+			/* IE8~11 */
+			/* .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+				background: blue\0;
+			} */
+			/* 2.选择器前缀发 
+			选择器前缀法是针对一些页面表现不一致或需要特殊对待的浏览器，在CSS选择器前加上一些自由某些特定浏览器才能识别的前缀进行hack
+			*html IE6
+			*+html  IE7
+			:root IE9以上现代浏览器
+			*/
+			/* IE6 */
+			/* *html .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+			} */
+			/* IE7 */
+			/* *+html .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+			} */
+			/* IE9+ */
+			/* :root .box{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+			} */
+			.box2{
+				width: 200px;
+				height: 200px;
+				border: 1px #000000 solid;
+				background: red;
+			} 
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<!-- ie注释写法 IE10+ 已经不支持注释法-->
+		<!-- [if IE]>
+		 <div class="box2"></div>
+		 <![endif]-->
+		 <!-- IE7版本 -->
+		 <!-- [if IE7]>
+		  <div class="box2"></div>
+		  <![endif]-->
+		  <!-- 非IE7版本 -->
+		  <!-- [if ! IE 7]>
+		   <div class="box2"></div>
+		   <![endif]-->
+	</body>
+</html>

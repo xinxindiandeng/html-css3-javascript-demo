@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>flex弹性布局</title>
+		<style type="text/css">
+			/* 
+			 flex布局：
+			 flex-direction:用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上
+				 row:默认值，显示为行，方向为当前文档水平流方向，默认情况下是从左往右
+				 row-reverse：显示为行，但方向和row属性值相反
+				 column：显示为列
+				 column-reverse：显示为列，但是方向和column属性值是反的
+			 
+			 flex-wrap:用于控制子项整体当行显示还是换行
+				nowrap:默认值，表示当行显示，不换行
+				wrap:宽度不足换行显示
+				wrap-reverse:宽度不足换行显示，但是是从下往上开始，也就是原本换行在项目的子项现在跑到上面
+	 
+			 */
+			
+			
+			
+			
+			#parent{width: 300px;height: 300px;border: 1px black solid; margin:20px auto;display: flex;}
+			/* #box{width: 100px; height: 100px;background: red;margin: auto;} */
+			#box{width: 300px;height: 300px;border: 1px #000 solid; margin:20px auto;display: flex;flex-direction: column;}
+			#box div{width: 50px;height: 50px;color: white;line-height: 50px; text-align: center;background: red;}
+
+			 
+/* flex-flow：是flwx-direction和flex-wrap的缩写，表示flex布局的flow流动特性，第一个值表示方向，第二个值表示换行，中间用空格隔开 */
+			 
+			#box2 {
+				width: 300px;
+				height: 300px;
+				border: 1px #000 solid;
+				margin: 20px auto;
+				display: flex;
+				/* flex-wrap: wrap; */
+				flex-flow: column wrap; 
+			}
+
+			#box2 div {
+				width: 50px;
+				height: 50px;
+				color: white;
+				line-height: 50px;
+				text-align: center;
+				background: red;
+			}
+		/*  
+		justify-content:决定了主轴方向上子项的对齐和分布方式
+				flex-start:默认值，表现为起始位置对齐
+				flex-end:表现为结束位置对齐
+				center:表现为居中对齐
+				space-between:变现为两端对齐，between是中间的意思，意思是多余的空白间距只是元素中间区域分配
+				space-around:around是环绕的意思，意思是每个flex子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半
+				space-evenly:evenly是匀称，平等的意思，也就是视觉上，每个flex子项两侧空白间距完全相等 
+				 */	
+			
+			#box3 {
+				width: 300px;
+				height: 300px;
+				border: 1px #000 solid;
+				margin: 20px auto;
+				display: flex;
+				/* justify-content: flex-start; */
+			/* 	justify-content: flex-end; */
+			/* justify-content: space-between; */
+			/* justify-content: space-around; */
+			justify-content: space-evenly;
+			}
+			
+			#box3 div {
+				width: 50px;
+				height: 50px;
+				color: white;
+				line-height: 50px;
+				text-align: center;
+				background: red;
+			}
+			
+			/* 
+			align-items：items指的就是flex子项们，因此align-items指的就是flex子项们相对于flex容器在侧轴方向上的对齐方式
+			stretch:默认值，flex子项拉伸
+			flex-start:表现为容器顶部对齐
+			flex-end:变现为容器底部对齐
+			center:变现为垂直居中对齐 
+			 */
+			/*
+			 align-content:可以看成和justify-content是相似且对立的属性，如果所有flex子项只是一行，则align-content属性是没有任何效果的
+			 stretch:默认值，每一行flex元素都等比拉伸
+			 flex-start:表现为起始位置对齐
+			 flex-end:变现为结束位置对齐
+			 center:变现为居中位置对齐
+			 space-between:变现为两端对齐
+			 space-around:每一行元素上下都享有不重叠的空白空间
+			 space-evenly:每一行元素都完全上下等分
+			 */
+			#box4{
+				width: 300px;
+				height:300px ;
+				border: 1px #000000 solid;
+				margin: 20px auto;
+				display: flex;
+				justify-content: space-evenly;
+				/* align-items: flex-start;
+				align-items: flex-end; */
+				align-items: flex-start;
+				align-content: center;
+			}
+			#box4 div{
+				width: 50px;
+				background: red;
+			
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!-- <div id="parent">
+			<div id="box"></div>
+		</div> -->
+		<!-- <div id="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div> -->
+
+		<!-- <div id="box2">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div> -->
+		
+		<!-- <div id="box3">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>1</div>
+			
+		</div> -->
+		<div id="box4">
+			<div>测试文本</div>
+			<div>测试文本测试文本</div>
+			<div>测试文本测试文本测试文本</div>
+			<div>测试文本测试文本测试文本测试文本</div>
+			<div>测试文本</div>
+			<div>测试文本测试文本</div>
+			<div>测试文本测试文本测试文本</div>
+			<div>测试文本测试文本测试文本测试文本</div>
+			<div>测试文本</div>
+			<div>测试文本测试文本</div>
+			<div>测试文本测试文本测试文本</div>
+			<div>测试文本测试文本测试文本测试文本</div>
+		</div>
+	</body>
+</html>

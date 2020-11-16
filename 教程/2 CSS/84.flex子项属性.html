@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>flex子项属性</title>
+		<style type="text/css">
+			/* 
+			 作用在flex子项上的css属性：
+			 order:可以通过设置order改变摸一个flex子项的排序位置。所有flex子项的默认order属性值是0
+			 flex-grow:属性中的grow是拓展的意思，拓展的就是flex子项所占据的宽度，扩展所侵占的空间就是出去元素外的剩余空白江西，默认值为0
+			 flex-shrink:属性中shrink是“收缩”的意思，flex-shrink主要处理当flex容器空间不足时候，单个元素的收缩比例，默认值是1
+			 flex-basis:定义了在分配剩余空间之前元素的默认大小
+			 flex:是flex-grow，flex-shrink和flex-basis的缩写
+			 align-self:值控制单独某一个flex子项的垂直对齐方式
+			 */
+			#box {
+				width: 300px;
+				height: 300px;
+				border: 1px #000 solid;
+				margin: 20px auto;
+				display: flex;
+			}
+			#box div{
+				width: 50px;
+				height: 50px;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+				background: red;
+				border: 1px #000000 solid;
+			}
+			/* #box div:first-child{
+				order: 1;
+			}
+			#box div:last-child{
+				order: -1;
+			} */
+			#box div:nth-child(2){
+				background: yellow;
+				flex-grow:0.2 ;
+			}
+			#box div:nth-child(3){
+				background: blue;
+				flex-grow:0.4 ;
+			}
+			
+			
+			#box2 {
+				width: 300px;
+				height: 300px;
+				border: 1px #000 solid;
+				margin: 20px auto;
+				display: flex;
+			}
+			#box2 div{
+				width: 50px;
+				height: 50px;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+				background: red;
+				border: 1px #000000 solid;
+			}
+			/* #box2 div:nth-child(2){
+				background: yellow;
+				flex-shrink:2;
+			} */
+			
+			/* #box2 div:nth-child(2){
+				background: yellow;
+				flex-shrink:2;
+				flex-basis: 60px;
+			} */
+			#box2 div:nth-child(2){
+				background: yellow;
+				flex-shrink:2;
+				/* flex: 0 1 auto; */
+				/* 
+				 第一个参数：flex-grow  拓展
+				 第二个参数：flex-shrink 收缩
+				 第三个参数：flex-basis 固定大小
+				 */
+				align-self: center;
+			}
+			
+			
+			#box2 div:nth-child(1){
+				
+				align-self: center;
+				
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- <div id="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+		</div> -->
+		<div id="box2">
+			<div>1</div>
+			<div>测试文字</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>1</div>
+		</div>
+	</body>
+</html>

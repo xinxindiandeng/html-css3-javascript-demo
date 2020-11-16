@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grid网格布局</title>
+		<style type="text/css">
+			/* 
+			Grid布局是一个二维的布局方法，综合两个方向重视同时存在的
+			 作用在gird容器上
+			 grid-template-columns
+			 grid-template-rows
+			 grid-template-areas
+			 grid-template
+			 grid-column-grap
+			 grid-row-gap
+			 grid-gap
+			 justify-items
+			 align-items
+			 place-items
+			 justify-content
+			 align-content
+			 place-content
+			 作用在gird子项上
+			 grid-column-start
+			 grid-column-end
+			 grid-row-start
+			 grid-row-end
+			 grid-column
+			 grid-row
+			 grid-area
+			 justify-self
+			 align-self
+			 place-self
+			 
+			 
+			 */
+			
+			/*  
+			grid-template-rows
+			grid-template-columns
+			对网格进行横纵划分，形成二维布局，单位可以是百分比自适应以及fr单位（网格剩余空间比例单位）
+			有是有，我们网格的划分是很规律的，如果需要添加多个纵横网格时，可以利用repeat()语法进行简化操作  
+			  */
+			.box{
+				width: 400px;
+				height: 500px;
+				border: 1px #000000 solid;
+				margin: 20px auto;
+				display: grid;
+				/* 三行三列 */
+				/* grid-template-rows: 100px auto 25%;
+				grid-template-columns:100px auto 25% ; */
+				/* grid-template-rows: 1fr 1fr 1fr; */
+				grid-template-rows: repeat(3,1fr);
+				/* grid-template-columns:1fr 1fr 1fr; */
+				grid-template-columns:repeat(3,1fr);
+			}
+		
+			
+			.box div{
+				border: 1px #000000 dashed;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+	</body>
+</html>

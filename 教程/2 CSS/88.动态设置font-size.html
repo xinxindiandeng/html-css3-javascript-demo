@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动态设置font-size</title>
+		<style type="text/css">
+			/* 
+			 em:是一个相对单位值，1em等于当前元素或父元素的font-size值
+			 rem:是一个相对单位值，1rem等于根元素的font-size值
+			 */
+			#box{
+				width: 1rem;
+				height: 1rem;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			/*
+			layout viewport : document.documentElement.clientWidth
+			iphone 6: 375,
+			iphone 6 plus:414,
+			iphone 6 : document.documentElement.clientWidth/3.75
+			iphone 6 plus:document.documentElement.clientWidth/3.75 ->110.4
+			*/
+		   var fontsize=document.documentElement.clientWidth/3.75;
+		   document.documentElement.style.fontSize=fontsize+"px";
+		   
+			
+			
+			
+		</script>
+	</body>
+</html>

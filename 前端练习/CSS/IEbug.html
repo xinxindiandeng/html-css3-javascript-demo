@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IEbug</title>
+		<style type="text/css">
+			/* opacity IE8以下版本不识别 */
+			/* .box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				opacity: 0.5;
+			} */
+			/* 兼容写法 */
+			/* .box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				opacity: 0.5;
+				filter: alpha(opacity=0.5);
+			} */
+			/* IE6下双边距bug */
+			/* .box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+				margin-left: 50px;
+			} */
+			
+			/* 兼容写法 */
+			/* .box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+				margin-left: 50px;
+				_display: inline;
+			} */
+			
+			/* IE6下最小高度bug，最小高为19px */
+			/* .box{
+				width: 100px;
+				height: 3px;
+				background: red;
+			} */
+			/* 兼容写法 */
+			.box{
+				width: 100px;
+				height: 3px;
+				background: red;
+				overflow: hidden;
+			}
+			
+			/* img边框问题 */
+			img{
+				border: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<a href="#">
+			<img src="img/20141121095216750.png" >
+		</a>
+		
+	</body>
+</html>

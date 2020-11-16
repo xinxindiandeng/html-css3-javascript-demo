@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>响应式布局</title>
+		<style type="text/css">
+			/* 
+			 响应式布局：
+			 利用媒体查询，即media queries，可以针对不同的媒体类型定义不同样式，从而实现响应式布局
+			 媒体类型：
+			 取值		含义
+			 all  	    用于所有设备
+			 print      用于打印机和打印预览
+			 screen     用于电脑屏幕，平板电脑，智能手机等
+			 speech     应用于屏幕阅读器等发声设备
+			 
+			 and not
+			 min-width,max-width
+			 orentation:portrait,orientation:landscape
+			 <link>
+			 */
+			#box{width: 100px; height: 100px; background: red;}
+			/* @media all and (min-width:600px){
+				#box{
+					background: blue;
+				}
+			} */
+			/*纵屏*/
+			@media all and (orientation:portrait) {
+				background:blue;
+				
+				
+			}
+			/* 横屏 */
+			@media all and (orientation:landscape) {
+				background:yellow;		
+			}
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="base.css" media="all and (min-width:400px)"/>
+		<link rel="stylesheet" type="text/css" href="base2.css" media="all and (min-width:600px)"/>
+		<link rel="stylesheet" type="text/css" href="base.css" media="all and (orientation:portrait)"/>
+		<link rel="stylesheet" type="text/css" href="base.css" media="all and (orientation:landscape)"/>
+		
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

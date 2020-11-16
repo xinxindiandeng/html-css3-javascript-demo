@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grid布局二</title>
+		<style type="text/css">
+			
+			/*
+			grid-template-areas
+			grid-template
+			area是区域的意思，grid-template-areas就是给我们的网格划分区域的，此时grid子项只要使用grid-area属性指定其隶属于那个区域
+			grid-template 是grid-template-rows,grid-template-column和grid-template-areas属性缩写
+			
+			grid-column-gap和grid-row-gap属性用来定义网格中网格间隙的尺寸
+			CSS grid-gap属性是grid-column-gap和grid-row-gap属性的缩写
+			
+			
+			*/
+			.box2 {
+				width: 300px;
+				height: 300px;
+				border: 1px gray dotted;
+				display: grid;
+			/* 	grid-template-rows: repeat(3,1fr);
+				grid-template-columns: repeat(3,1fr);
+				grid-template-areas:
+				 "a1 a1 a1"
+				 "a2 a2 a3 "
+				 "a2 a2 a3"
+				 ; */
+				 
+				 /* 复合写法 */
+				 grid-template: 
+				 "a1 a1 a1" 1fr
+				 "a2 a2 a3" 1fr
+				 "a2 a2 a3" 1fr
+				 /1fr 1fr 1fr ;
+				 /*  /1fr 1fr 1fr 纵向写法 */
+				 /* grid-row-gap: 10px;
+				 grid-column-gap: 10px; */
+				 grid-gap: 10px 8px;
+				 
+			}
+			.box2 div{
+				background: red;
+				border: 1px #000000 solid;
+			}
+			.box2 div:nth-child(1){grid-area: a1;}
+			.box2 div:nth-child(2){grid-area: a2;}
+			.box2 div:nth-child(3){grid-area: a3;}
+			
+			/* 
+			justify-items制定了网格元素水平呈现方式，是水平拉伸显示，还是左中右对齐，align-itms指定了网格元素垂直方式，是垂直拉伸显示，还是上中下对齐
+			place-items可以让align-items和justify-items属性写在单个声明中
+			stretch:默认值，拉伸 变现为水平或垂直填充
+			start：变现为容器左侧或顶部对齐
+			end：表现为容器右侧或底部对齐
+			center：表现为水平或垂直居中对齐		
+			 */
+			
+			.box3{
+				width: 500px;
+				height: 500px;
+				border: 1px gray dotted;
+				display: grid;
+				grid-template-rows: repeat(3,auto);
+				grid-template-columns: repeat(3,auto);
+				/* 
+				align-items: start;
+				justify-items: start;
+				 */
+				/* place-items: start end; */
+				/* justify-content: space-between;
+				align-content: space-between; */
+				place-content: space-between space-between;
+				
+				
+			}
+			.box3 div{
+				background: red;
+				border: 1px #000000 solid;
+			}
+			
+			/* 
+			 justify-content指定了网格元素的水平分布方式。align-content指定了网格元素的垂直分布方式，place-content可以让align-content和justify-content属性卸载一个css声明中
+			 stretch:默认值，拉伸。表现为水平或者垂直填充
+			 start：表现为容器左侧或顶部对齐
+			 end：表现为容器右侧或底部对齐
+			 center：表现为水平或垂直居中对齐
+			 space-between：表现为两端对齐
+			 space-around：享有独立不重叠的空白空间
+			 space-evenly：平均分配空白空间
+			 
+			 */
+		</style>
+	</head>
+	<body>
+		<div class="box2">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+		
+		<div class="box3">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grid子项</title>
+		<style type="text/css">
+			/* 
+			 grid-column-start:水平方向上占据的起始位置
+			 grid-column-end:水平方向上占据的结束位置（span属性）
+			 grid-row-start:垂直方向上占据的起始位置
+			 grid-row-end:垂直方向上占据的结束位置（span属性）
+			 grid-column:grid-column-start+grid-column-end的缩写
+			 grid-row:grid-row-start+grid-row-end的缩写
+			
+			 justify-self:单个网格元素的水平对齐方式
+			 align-self:单个网格元素的垂直对齐方式
+			 place-self:align-self和justify-self的缩写
+			 
+			 */
+			.box {
+				width: 300px;
+				height: 300px;
+				border: 1px gray dotted;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+			}
+
+			.box div {
+				background: red;
+				border: 1px black solid;
+				/* grid-column-start: 2;
+				grid-column-end: 3; */
+			/* 	grid-column: 2/3; */
+
+
+				/* grid-row-start: 2;
+				grid-row-end: 3; */
+				/* grid-row: 2/span 2; */
+				
+				/*  grid-area:表示当前网格所占用的区域，名字和位置两种表示方法 */
+				grid-area: 3/2/4/4;
+				/* 
+				第一个值是水平的起始位置
+				第二个值是垂直的起始位置
+				第三个值是水平的位置结束
+				第四个值是垂直的结束位置
+				 */
+			}
+			.box2{
+				width: 300px;
+				height: 300px;
+				border: 1px gray dotted;
+				display: grid;
+				grid-template-rows: repeat(3,1fr);
+				grid-template-columns: repeat(3,1fr);
+			}
+			.box2 div{background: red;border: 1px black solid;}
+			.box2 div:nth-child(2){
+				/*某一个元素操作*/
+				/* 
+				align-self: end;
+				justify-self: center;
+				 */
+				place-self: end start;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>
+
+			</div>
+		</div>
+		
+		<div class="box2">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+	</body>
+</html>
